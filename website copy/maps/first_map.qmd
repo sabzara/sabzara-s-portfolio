@@ -1,0 +1,64 @@
+---
+title: "1st_Maps"
+editor: visual
+---
+
+```{r}
+#install.packages("maps")
+library(maps)
+```
+
+```{r}
+map()
+```
+
+Here are some maps from the map package. [^1]
+
+[^1]: https://cran.r-project.org/web/packages/maps/maps.pdf
+
+## The world
+
+```{r}
+colours<-c("blue","pink","orange","red") 
+map(database = "state", regions = c("california","oregon","washington"), col=colours,fill=TRUE)#map.cities                                  
+```
+
+```{r}
+colors<-c("blue","pink","orange")
+```
+
+```{r}
+map(database = "world", regions=c("Indonesia","China","Australia"))
+```
+
+## The US
+
+```{r}
+maps::map(database = "state")
+```
+
+```{r}
+map(database = "state", regions = "Massachusetts")
+```
+
+```{r}
+map(database = "county", regions = c("Massachusetts"))
+map.cities()
+```
+
+```{r}
+new_england <-c('Vermont',"Massachusetts","Connecticut", "Rhode Island", "New Hampshire", "Maine")
+
+map(database = "county", regions = new_england)
+map.cities()
+```
+
+You try:
+
+First maps
+
+1.  Add another map of California, Oregon and Washington.
+    -   Color this map. hint: type `?map()` into the console to read the documentation.
+        -   Color the map with three colors of your choice.
+        -   Color the border only.
+2.  Make a world map with China, Indonesia and Australia.
