@@ -1,0 +1,20 @@
+---
+title: "Sabzara Ali" 
+image: sabzara.JPG
+toc: false 
+about: 
+  template: jolla 
+  image-shape: round
+  image-width: 8em
+  links: # create buttons
+    - text: LinkedIn
+      href: https://www.linkedin.com
+      target: _blank # opens link in a new browser tab
+    - text: GitHub
+      href: https://github.com
+      target: _blank 
+    - text: Email
+      href: sabzara@smithie.edu
+---
+
+Sabzara is a sophomore at Smith College, majoring in Quantitative Economics and Mathematics. She is passionate about using data to create visualizations that help drive better decision-making.

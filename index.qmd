@@ -1,0 +1,26 @@
+---
+title: "Welcome to My Portfolio!"
+output:
+  html_document:
+    css: "styles.css"
+---
+
+![Sabzara Ali](my.figure.png)
+
+Explore my data analysis and visualization projects from SDS192!
+
+### ***Scorecard Analysis***
+
+-   This project analyzes how the percentage of STEM and business degrees at colleges affects long-term income and tuition costs, revealing higher earnings for graduates but increased affordability challenges for low-income students. [View Project](projects/project-1-sabzara-alex/scorecard_analysis.qmd)
+
+------------------------------------------------------------------------
+
+### ***FEC Analysis***
+
+-   This analysis highlights the complex relationship between campaign contributions and election outcomes in New Jersey’s 2016 U.S. House race. While winning candidates received higher contributions, especially from lobbyist committees, the data reveals that multiple factors—such as the type of committee and political environment—must be considered, making it clear that funding alone does not determine electoral success [View Project](projects/project-2-fec-sabzara-alex/fec-analysis.qmd)
+
+------------------------------------------------------------------------
+
+### ***Mapping Chipotle Stores***
+
+-   This project analyzed the distribution of Chipotle restaurants across the U.S. and their correlation with state populations. By comparing store counts to population density and adjusting for population size, we found that Chipotle strategically concentrates locations in high-density urban areas while maintaining a balanced store density in smaller states. [View Project](projects/project-3-mapping-sabzara-tabitha/mapping.qmd)

@@ -1,0 +1,28 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Sabzara Ali"
+  navbar:
+    left:
+      - text: Home
+        href: index.qmd
+      - text: About
+        href: about.qmd
+      - text: Projects
+        menu:
+          - text:  "Project 1: Scorecard Analysis"
+            href:  projects/project-1-sabzara-alex/scorecard_analysis.qmd
+          - text:  "Project 2: FEC Analysis"
+            href:  projects/project-2-fec-sabzara-alex/fec-analysis.qmd
+          - text:  "Project 3: Mapping"
+            href:  projects/project-3-mapping-sabzara-tabitha/mapping.qmd
+
+format:
+  html:
+    theme: lux
+    css: styles.css
+    toc: true
+
+editor: visual
