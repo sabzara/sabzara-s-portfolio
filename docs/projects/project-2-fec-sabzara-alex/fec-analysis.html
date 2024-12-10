@@ -8,7 +8,7 @@
 
 <meta name="author" content="Sabzara Ali">
 <meta name="author" content="Alex Blaszczyk">
-<meta name="dcterms.date" content="2024-12-09">
+<meta name="dcterms.date" content="2024-12-10">
 
 <title>Sabzara Ali - FEC Analysis</title>
 <style>
@@ -69,6 +69,8 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script src="../../site_libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="../../site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
 
 
 <link rel="stylesheet" href="../../styles.css">
@@ -134,8 +136,11 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#total-contributions-to-winning-and-losing-candidates-by-committee-designation" id="toc-total-contributions-to-winning-and-losing-candidates-by-committee-designation" class="nav-link active" data-scroll-target="#total-contributions-to-winning-and-losing-candidates-by-committee-designation">Total Contributions to Winning and Losing Candidates by Committee Designation</a></li>
-  <li><a href="#candidate-contributions-by-winning-status-and-associated-transaction-types" id="toc-candidate-contributions-by-winning-status-and-associated-transaction-types" class="nav-link" data-scroll-target="#candidate-contributions-by-winning-status-and-associated-transaction-types">Candidate Contributions by Winning Status and Associated Transaction Types</a></li>
+  <li><a href="#campaign-contributions-and-election-outcomes" id="toc-campaign-contributions-and-election-outcomes" class="nav-link active" data-scroll-target="#campaign-contributions-and-election-outcomes">Campaign Contributions and Election Outcomes</a>
+  <ul class="collapse">
+  <li><a href="#contributions-by-committee-type-winners-vs.-losers" id="toc-contributions-by-committee-type-winners-vs.-losers" class="nav-link" data-scroll-target="#contributions-by-committee-type-winners-vs.-losers">Contributions by Committee Type: Winners vs.&nbsp;Losers</a></li>
+  <li><a href="#campaign-contributions-by-outcome-and-transaction-type" id="toc-campaign-contributions-by-outcome-and-transaction-type" class="nav-link" data-scroll-target="#campaign-contributions-by-outcome-and-transaction-type">Campaign Contributions by Outcome and Transaction Type</a></li>
+  </ul></li>
   <li><a href="#blog-post" id="toc-blog-post" class="nav-link" data-scroll-target="#blog-post">Blog post</a></li>
   </ul>
 </nav>
@@ -178,7 +183,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">December 9, 2024</p>
+      <p class="date">December 10, 2024</p>
     </div>
   </div>
   
@@ -190,17 +195,20 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="total-contributions-to-winning-and-losing-candidates-by-committee-designation" class="level2">
-<h2 class="anchored" data-anchor-id="total-contributions-to-winning-and-losing-candidates-by-committee-designation">Total Contributions to Winning and Losing Candidates by Committee Designation</h2>
-<p><strong><em>This plot visualizes the total contributions made to candidates grouped by the winning status (won or lost) and committee designation</em></strong></p>
+<section id="campaign-contributions-and-election-outcomes" class="level2">
+<h2 class="anchored" data-anchor-id="campaign-contributions-and-election-outcomes">Campaign Contributions and Election Outcomes</h2>
+<p>This project analyzes the relationship between campaign contributions and election results for the U.S. House of Representatives in New Jersey during the 2016 election cycle. Using data from the Federal Election Commission (FEC), we explore how contributions from various committees influenced the success of candidates, shedding light on the impact of financial support in determining election outcomes.</p>
+<section id="contributions-by-committee-type-winners-vs.-losers" class="level3">
+<h3 class="anchored" data-anchor-id="contributions-by-committee-type-winners-vs.-losers">Contributions by Committee Type: Winners vs.&nbsp;Losers</h3>
+<p><strong><em>This plot visualizes the total contributions made to candidates grouped by the winning status (won or lost) and committee designation.</em></strong></p>
 <div class="cell">
 <div class="cell-output-display">
-<table class="caption-top table table-sm table-striped small">
+<table class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <caption>Total Contributions by Winning Status</caption>
 <thead>
 <tr class="header">
-<th style="text-align: left;">won</th>
-<th style="text-align: right;">total_contribution_amt</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">won</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">total_contribution_amt</th>
 </tr>
 </thead>
 <tbody>
@@ -212,8 +220,16 @@ ul.task-list li input[type="checkbox"] {
 <td style="text-align: left;">TRUE</td>
 <td style="text-align: right;">11460967</td>
 </tr>
-</tbody>
+</tbody><tfoot>
+<tr class="odd">
+<td style="text-align: left; padding: 0;"><span style="font-style: italic;text-decoration: underline;">Source:</span> <sup></sup> Federal Election Commission</td>
+<td style="text-align: right;"></td>
+</tr>
+</tfoot>
+
 </table>
+
+
 </div>
 </div>
 <div class="cell">
@@ -226,19 +242,19 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </section>
-<section id="candidate-contributions-by-winning-status-and-associated-transaction-types" class="level2">
-<h2 class="anchored" data-anchor-id="candidate-contributions-by-winning-status-and-associated-transaction-types">Candidate Contributions by Winning Status and Associated Transaction Types</h2>
-<p><strong><em>his table displays candidates, whether they won or lost, the types of transactions associated with their campaigns, and the total transaction amounts</em></strong></p>
+<section id="campaign-contributions-by-outcome-and-transaction-type" class="level3">
+<h3 class="anchored" data-anchor-id="campaign-contributions-by-outcome-and-transaction-type">Campaign Contributions by Outcome and Transaction Type</h3>
+<p><strong><em>This table displays candidates, whether they won or lost, the types of transactions associated with their campaigns, and the total transaction amounts.</em></strong></p>
 <div class="cell">
 <div class="cell-output-display">
-<table class="caption-top table table-sm table-striped small">
+<table class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <caption>Candidate Contributions by Winning Status and Transaction Types</caption>
 <thead>
 <tr class="header">
-<th style="text-align: left;">cand_name</th>
-<th style="text-align: left;">transaction_tp</th>
-<th style="text-align: left;">won</th>
-<th style="text-align: right;">total</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">cand_name</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">transaction_tp</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">won</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">total</th>
 </tr>
 </thead>
 <tbody>
@@ -530,18 +546,37 @@ ul.task-list li input[type="checkbox"] {
 <td style="text-align: left;">FALSE</td>
 <td style="text-align: right;">2100</td>
 </tr>
-</tbody>
+</tbody><tfoot>
+<tr class="odd">
+<td style="text-align: left; padding: 0;"><span style="font-style: italic;text-decoration: underline;">Source:</span> <sup></sup> Federal Election Commission</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding: 0;"><span style="font-style: italic;text-decoration: underline;">Note:</span> <sup>a</sup> Transaction types include various contributions made to or against candidates. Descriptions can be found on FEC: https://www.fec.gov/campaign-finance-data/transaction-type-code-descriptions/</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: right;"></td>
+</tr>
+</tfoot>
+
 </table>
-<p><strong>Note:</strong> Transaction types include various contributions made to or against candidates. Descriptions can be found here on FEC https://www.fec.gov/campaign-finance-data/transaction-type-code-descriptions/</p>
+
+
 </div>
 </div>
+</section>
 </section>
 <section id="blog-post" class="level1">
 <h1>Blog post</h1>
 <p>We used the fec16 package, which contains data from the Federal Election Commission (FEC) for the 2015-2016 U.S. election cycle. We utilized the following datasets from the fec16.</p>
-<p>Committees: Information on committees registered with the FEC, detailing their affiliations and financial activities.</p>
-<p>Campaigns: Data on U.S. House and Senate campaigns, including candidate details and campaign expenditures. Results_house: Election results for the 2016 U.S. House of Representatives race, including vote counts and candidate information.</p>
-<p>Contributions: A sample dataset of contributions from committees to candidates during the 2016 cycle.</p>
+<ul>
+<li><p>Committees: Information on committees registered with the FEC, detailing their affiliations and financial activities.</p></li>
+<li><p>Campaigns: Data on U.S. House and Senate campaigns, including candidate details and campaign expenditures.</p></li>
+<li><p>Results_house: Election results for the 2016 U.S. House of Representatives race, including vote counts and candidate information.</p></li>
+<li><p>Contributions: A sample dataset of contributions from committees to candidates during the 2016 cycle.</p></li>
+</ul>
 <p>Our analysis examined how money contributed by committees to candidates and spent in campaigns for or against candidates affected election results for the U.S. House of Representatives in New Jersey.</p>
 <p>At first, we performed an inner join on the committees, contributions, and house results datasets. Our analysis revealed that winning candidates received $11,460 K from candidate committees. ( about two times more) while losing candidates received only about $ 5,400 K . The contributions to winning candidates were predominantly from Lobbyist/Registrant PACs (over two-third), followed by substantial funding from Unauthorized committees. In contrast, losing candidates had primarily relied on Unauthorized Committees followed by minimal amounts from Leadership PACs and Lobbyist/Registrant PACs.</p>
 <p>In joining the sample dataset “contributions” with the full datasets of “campaigns” and “results_house”, and then filtering the results to New Jersey, We were able to find the contributions given to all candidates for the NJ House of Representatives and their results in the 2016 election. A pattern found by the dataset is that candidates that were elected often received multiple types of contributions. It is worth noting that one of the contribution types of this dataset also includes contributions that were made against those candidates. However, the candidates that were elected often had several different contribution types, so even if one was against the candidate, the others would outweigh it.</p>

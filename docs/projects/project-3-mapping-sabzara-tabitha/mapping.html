@@ -8,7 +8,7 @@
 
 <meta name="author" content="Sabzara Ali">
 <meta name="author" content="Tabitha Githinji">
-<meta name="dcterms.date" content="2024-12-09">
+<meta name="dcterms.date" content="2024-12-10">
 
 <title>Sabzara Ali - Mapping Chipotlle Stores</title>
 <style>
@@ -154,7 +154,13 @@ div.csl-indent {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#blog-post" id="toc-blog-post" class="nav-link active" data-scroll-target="#blog-post">Blog post</a></li>
+  <li><a href="#exploring-chipotles-store-placement-strategy" id="toc-exploring-chipotles-store-placement-strategy" class="nav-link active" data-scroll-target="#exploring-chipotles-store-placement-strategy">Exploring Chipotle’s Store Placement Strategy</a>
+  <ul class="collapse">
+  <li><a href="#distribution-of-stores." id="toc-distribution-of-stores." class="nav-link" data-scroll-target="#distribution-of-stores.">Distribution of Stores.</a></li>
+  <li><a href="#visualizing-the-proportion-of-chipotle-stores-across-states" id="toc-visualizing-the-proportion-of-chipotle-stores-across-states" class="nav-link" data-scroll-target="#visualizing-the-proportion-of-chipotle-stores-across-states">Visualizing the Proportion of Chipotle Stores Across States</a></li>
+  <li><a href="#adjusting-chipotle-store-distribution-by-population" id="toc-adjusting-chipotle-store-distribution-by-population" class="nav-link" data-scroll-target="#adjusting-chipotle-store-distribution-by-population">Adjusting Chipotle Store Distribution by Population</a></li>
+  </ul></li>
+  <li><a href="#blog-post" id="toc-blog-post" class="nav-link" data-scroll-target="#blog-post">Blog Post</a></li>
   </ul>
 </nav>
     </div>
@@ -196,7 +202,7 @@ div.csl-indent {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">December 9, 2024</p>
+      <p class="date">December 10, 2024</p>
     </div>
   </div>
   
@@ -208,8 +214,12 @@ div.csl-indent {
 </header>
 
 
-<p>Question: How does the distribution of Chipotle stores across the United States align with state populations? Additionally, when analyzing the proportion of stores relative to the total number of Chipotle locations and adjusting for population size, what insights can we uncover about factors influencing store placement, such as population density, urbanization, or regional economic activity</p>
-<p>This map displays the distribution of Chipotle stores across the United States</p>
+<section id="exploring-chipotles-store-placement-strategy" class="level2">
+<h2 class="anchored" data-anchor-id="exploring-chipotles-store-placement-strategy">Exploring Chipotle’s Store Placement Strategy</h2>
+<p>We are diving into Chipotle’s store distribution across the U.S., analyzing how its locations align with state populations and exploring factors that influence store placements, like population density, urbanization, and regional economic activity.</p>
+<section id="distribution-of-stores." class="level3">
+<h3 class="anchored" data-anchor-id="distribution-of-stores.">Distribution of Stores.</h3>
+<p><em>This map displays the distribution of Chipotle stores across the United States.</em></p>
 <div class="cell">
 <div class="cell-output-display">
 <div>
@@ -218,16 +228,11 @@ div.csl-indent {
 </figure>
 </div>
 </div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="mapping_files/figure-html/analysis-1-2.png" class="img-fluid figure-img" width="672"></p>
-</figure>
 </div>
-</div>
-</div>
-<p>In this section, we aim to visualize the proportion of Chipotle stores in each state across the United States. To achieve this, we first create a population map to provide context and to ensure we don’t create the population map again.</p>
-<p>We first create the population map of the United States.</p>
+</section>
+<section id="visualizing-the-proportion-of-chipotle-stores-across-states" class="level3">
+<h3 class="anchored" data-anchor-id="visualizing-the-proportion-of-chipotle-stores-across-states">Visualizing the Proportion of Chipotle Stores Across States</h3>
+<p><em>In this section, we aim to visualize the proportion of Chipotle stores in each state relative to the total number of stores nationwide. To provide context, we first reference a population map to guide our analysis and ensure we don’t unintentionally recreate the population map again.</em></p>
 <div class="cell">
 <div class="cell-output-display">
 <div>
@@ -237,8 +242,6 @@ div.csl-indent {
 </div>
 </div>
 </div>
-<p>Next, we create a map displaying the proportion of Chipotle stores in each state relative to the total number of stores across the United States.</p>
-<p>creating the chloropleth map</p>
 <div class="cell">
 <div class="cell-output-display">
 <div>
@@ -248,8 +251,10 @@ div.csl-indent {
 </div>
 </div>
 </div>
-<p>From the plot created, it is evident that the map closely resembles a population map, as it shows a similar distribution pattern across the states.</p>
-<p>To create a map that accounts for population differences, we calculate the number of Chipotle stores per million residents in each state.</p>
+</section>
+<section id="adjusting-chipotle-store-distribution-by-population" class="level3">
+<h3 class="anchored" data-anchor-id="adjusting-chipotle-store-distribution-by-population">Adjusting Chipotle Store Distribution by Population</h3>
+<p><em>The initial plot shows a distribution of Chipotle stores that closely mirrors the population distribution across states, indicating a correlation between store counts and population sizes. To gain deeper insights, we adjust the analysis by calculating the number of Chipotle stores per million residents in each state. By visualizing this proportion, we account for population differences, allowing us to see which states have more stores per million residents.</em></p>
 <div class="cell">
 <div class="cell-output-display">
 <div>
@@ -259,8 +264,10 @@ div.csl-indent {
 </div>
 </div>
 </div>
+</section>
+</section>
 <section id="blog-post" class="level1">
-<h1>Blog post</h1>
+<h1>Blog Post</h1>
 <p>In this project, we explored the distribution of Chipotle restaurants across the United States using geospatial analysis. Leveraging a dataset from Kaggle, which provides the location of every Chipotle restaurant in the country, we sought to understand the company’s location strategy. The dataset was uploaded by Jeffrey Braun, a UChicago graduate, who claimed to have scraped the data from the Chipotle website. <span class="citation" data-cites="braun2020chipotle">(<a href="#ref-braun2020chipotle" role="doc-biblioref">Braun 2020</a>)</span>. Specifically, we aimed to analyze how Chipotle store locations are distributed in relation to state populations and to investigate whether store concentration correlates with population density.</p>
 <p>We began by visualizing the locations of Chipotle restaurants on a U.S. map. This involved converting the dataset into a spatial format, enabling us to plot the coordinates of each store. The visualization revealed that Chipotle locations are primarily concentrated in urban centers, with states like California, New York, and Texas hosting the most stores. These states, with their high population densities and large urban hubs like Los Angeles, New York City, and Houston, naturally align with a higher number of Chipotle locations. To assess how population influences store distribution, we created a population map of the United States. This step was crucial as it provided a baseline for comparing the distribution of Chipotle locations to population data. From there, we developed a custom function to calculate each state’s proportion of Chipotle stores relative to the national total. Using this data, we created a choropleth map that graphically represented the store proportions, offering a clear depiction of states with higher or lower concentrations of Chipotle locations. The resulting map closely mirrored the population map, suggesting that states with larger populations generally host more Chipotle stores. However, we wanted to investigate further to determine if less-populated states had a comparable number of stores per million residents to more populous states.</p>
 <p>We then took our analysis a step further by considering population-adjusted metrics. Recognizing that absolute store counts alone do not account for state population differences, we integrated U.S. Census data to calculate the number of Chipotle stores per million residents in each state. This approach allowed us to explore whether smaller states with lower populations had comparable store density to larger, more populous states. Using this new proportion, we created another choropleth map to visualize the distribution of Chipotle stores on a per-capita basis, offering a more balanced view of store density relative to population size. The population-adjusted analysis highlights interesting patterns. States with, such as Minnesota, Ohio, and Pennsylvania, have a proportionally higher number of Chipotle stores per capita, even if their total store counts are relatively modest. On the other hand, some highly populated states have a relatively lower store density per capita, despite hosting a large number of locations overall. This suggests that Chipotle’s placement strategy is not solely driven by population size but also considers other factors such as high-traffic urban centers, economic activity, and potentially regional preferences.</p>
