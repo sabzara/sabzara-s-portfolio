@@ -1,5 +1,12 @@
 [
   {
+    "objectID": "My map on sds.html",
+    "href": "My map on sds.html",
+    "title": "Map",
+    "section": "",
+    "text": "```{r}\n\n\n\n\n\n#install.packages(googlesheets4)\n\n\n\n\n\nlibrary(tidyverse)\n\n\n\n\n\nlibrary(maps)\n\n\n\n\n\nlibrary(googlesheets4)\n\n\n\n\n\nclass_info &lt;- read_sheet(“https://docs.google.com/spreadsheets/d/1XOAFQvBcFvhKwEl5xH6l3nRJK2Wk0hWZ18S9kAZclQ0/edit?usp=sharing”) |&gt; janitor::clean_names()\n\n\n!\n\n\n# selecting only the column we are interested in and making it into a vector. country_vector &lt;- as.vector( class_info |&gt; select(“country”))\n```"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Welcome to My Portfolio!",
@@ -7,284 +14,67 @@
     "text": "Sabzara Ali"
   },
   {
-    "objectID": "projects/project-2-fec-sabzara-alex/fec-analysis.html",
-    "href": "projects/project-2-fec-sabzara-alex/fec-analysis.html",
-    "title": "FEC Analysis",
+    "objectID": "index.html#projects",
+    "href": "index.html#projects",
+    "title": "Welcome to My Portfolio!",
+    "section": "Projects",
+    "text": "Projects\nExplore my data analysis and visualization projects from SDS192!\n\nScorecard Analysis\n\nThis project explores how the percentage of STEM and business degrees at colleges impacts long-term income and tuition costs. Findings show that while schools offering more of these degrees have higher tuition, graduates tend to earn significantly more. However, the affordability for low-income students remains a growing challenge. View Project\n\n\n\n\nFEC Analysis\n\nThis analysis dives into the relationship between campaign contributions and election outcomes in New Jersey’s 2016 U.S. House race. While winning candidates received higher contributions, especially from lobbyist committees, the data shows that multiple factors—such as committee type and political environment—play crucial roles in determining electoral success. View Project\n\n\n\n\nMapping Chipotle Stores\n\nHere, I analyzed the distribution of Chipotle restaurants across the U.S., correlating it with state populations. By adjusting for population density, I found that Chipotle strategically places its locations in high-density urban areas while balancing store density in smaller states. View Project"
+  },
+  {
+    "objectID": "projects/project-3-mapping-sabzara-tabitha/mapping.html",
+    "href": "projects/project-3-mapping-sabzara-tabitha/mapping.html",
+    "title": "Mapping Chipotlle Stores",
     "section": "",
-    "text": "This project analyzes the relationship between campaign contributions and election results for the U.S. House of Representatives in New Jersey during the 2016 election cycle. Using data from the Federal Election Commission (FEC), we explore how contributions from various committees influenced the success of candidates, shedding light on the impact of financial support in determining election outcomes.\n\n\nThis plot visualizes the total contributions made to candidates grouped by the winning status (won or lost) and committee designation.\n\n\n\nTotal Contributions by Winning Status\n\n\nwon\ntotal_contribution_amt\n\n\n\n\nFALSE\n5406606\n\n\nTRUE\n11460967\n\n\n\nSource:  Federal Election Commission\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThis table displays candidates, whether they won or lost, the types of transactions associated with their campaigns, and the total transaction amounts.\n\n\n\nCandidate Contributions by Winning Status and Transaction Types\n\n\ncand_name\ntransaction_tp\nwon\ntotal\n\n\n\n\nCOLE, DAVID HAGERTY\n24K\nFALSE\n1000\n\n\nCOLEMAN, BONNIE WATSON\n24E\nTRUE\n20\n\n\nCOLEMAN, BONNIE WATSON\n24K\nTRUE\n523035\n\n\nFRELINGHUYSEN, RODNEY P.\n24E\nTRUE\n48\n\n\nFRELINGHUYSEN, RODNEY P.\n24K\nTRUE\n915210\n\n\nFRELINGHUYSEN, RODNEY P.\n24Z\nTRUE\n7889\n\n\nGARRETT, SCOTT REP.\n24A\nFALSE\n4276731\n\n\nGARRETT, SCOTT REP.\n24C\nFALSE\n93710\n\n\nGARRETT, SCOTT REP.\n24E\nFALSE\n335388\n\n\nGARRETT, SCOTT REP.\n24F\nFALSE\n2350\n\n\nGARRETT, SCOTT REP.\n24K\nFALSE\n668881\n\n\nGARRETT, SCOTT REP.\n24Z\nFALSE\n5247\n\n\nGOTTHEIMER, JOSH\n24A\nTRUE\n30000\n\n\nGOTTHEIMER, JOSH\n24C\nTRUE\n96200\n\n\nGOTTHEIMER, JOSH\n24E\nTRUE\n1930852\n\n\nGOTTHEIMER, JOSH\n24F\nTRUE\n55514\n\n\nGOTTHEIMER, JOSH\n24K\nTRUE\n646002\n\n\nGOTTHEIMER, JOSH\n24Z\nTRUE\n2351\n\n\nJACOB, PETER MR.\n24K\nFALSE\n6348\n\n\nLANCE, LEONARD\n24E\nTRUE\n13400\n\n\nLANCE, LEONARD\n24F\nTRUE\n2158\n\n\nLANCE, LEONARD\n24K\nTRUE\n671912\n\n\nLANCE, LEONARD\n24Z\nTRUE\n1100\n\n\nLAW, ALEXANDER\n24E\nFALSE\n9821\n\n\nLOBIONDO, FRANK A.\n24E\nTRUE\n18069\n\n\nLOBIONDO, FRANK A.\n24K\nTRUE\n1144426\n\n\nLOBIONDO, FRANK A.\n24Z\nTRUE\n1557\n\n\nMACARTHUR, THOMAS\n24E\nTRUE\n2445\n\n\nMACARTHUR, THOMAS\n24F\nTRUE\n2312\n\n\nMACARTHUR, THOMAS\n24K\nTRUE\n844833\n\n\nMACARTHUR, THOMAS\n24Z\nTRUE\n745\n\n\nNORCROSS, DONALD W\n24E\nTRUE\n216542\n\n\nNORCROSS, DONALD W\n24K\nTRUE\n857546\n\n\nNORCROSS, DONALD W\n24Z\nTRUE\n2513\n\n\nPALLONE, FRANK JR\n24E\nTRUE\n20\n\n\nPALLONE, FRANK JR\n24K\nTRUE\n1590863\n\n\nPALLONE, FRANK JR\n24Z\nTRUE\n1420\n\n\nPASCRELL, WILLIAM J. HON.\n24E\nTRUE\n10\n\n\nPASCRELL, WILLIAM J. HON.\n24K\nTRUE\n918850\n\n\nPATTERSON, ROBERT W.\n24K\nFALSE\n5000\n\n\nPAYNE, DONALD M., JR.\n24E\nTRUE\n20\n\n\nPAYNE, DONALD M., JR.\n24K\nTRUE\n345450\n\n\nSIRES, ALBIO\n24E\nTRUE\n10\n\n\nSIRES, ALBIO\n24K\nTRUE\n353850\n\n\nSMITH, CHRISTOPHER H\n24E\nTRUE\n9508\n\n\nSMITH, CHRISTOPHER H\n24K\nTRUE\n249287\n\n\nSMITH, CHRISTOPHER H\n24Z\nTRUE\n5000\n\n\nSONNEK-SCHMELZ, BRENT J\n24K\nFALSE\n2100\n\n\n\nSource:  Federal Election Commission\n\n\n\n\n\nNote: a Transaction types include various contributions made to or against candidates. Descriptions can be found on FEC: https://www.fec.gov/campaign-finance-data/transaction-type-code-descriptions/"
+    "text": "We are diving into Chipotle’s store distribution across the U.S., analyzing how its locations align with state populations and exploring factors that influence store placements, like population density, urbanization, and regional economic activity.\n\n\nThis map displays the distribution of Chipotle stores across the United States.\n\n\n\n\n\n\n\n\n\n\n\n\nIn this section, we aim to visualize the proportion of Chipotle stores in each state relative to the total number of stores nationwide. To provide context, we first reference a population map to guide our analysis and ensure we don’t unintentionally recreate the population map again.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe initial plot shows a distribution of Chipotle stores that closely mirrors the population distribution across states, indicating a correlation between store counts and population sizes. To gain deeper insights, we adjust the analysis by calculating the number of Chipotle stores per million residents in each state. By visualizing this proportion, we account for population differences, allowing us to see which states have more stores per million residents."
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "Sabzara Ali",
+    "objectID": "projects/project-3-mapping-sabzara-tabitha/mapping.html#exploring-chipotles-store-placement-strategy",
+    "href": "projects/project-3-mapping-sabzara-tabitha/mapping.html#exploring-chipotles-store-placement-strategy",
+    "title": "Mapping Chipotlle Stores",
     "section": "",
-    "text": "Sabzara is a sophomore at Smith College, majoring in Quantitative Economics and Mathematics. She is passionate about using data to create visualizations that help drive better decision-making."
+    "text": "We are diving into Chipotle’s store distribution across the U.S., analyzing how its locations align with state populations and exploring factors that influence store placements, like population density, urbanization, and regional economic activity.\n\n\nThis map displays the distribution of Chipotle stores across the United States.\n\n\n\n\n\n\n\n\n\n\n\n\nIn this section, we aim to visualize the proportion of Chipotle stores in each state relative to the total number of stores nationwide. To provide context, we first reference a population map to guide our analysis and ensure we don’t unintentionally recreate the population map again.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe initial plot shows a distribution of Chipotle stores that closely mirrors the population distribution across states, indicating a correlation between store counts and population sizes. To gain deeper insights, we adjust the analysis by calculating the number of Chipotle stores per million residents in each state. By visualizing this proportion, we account for population differences, allowing us to see which states have more stores per million residents."
   },
   {
-    "objectID": "about.html#education",
-    "href": "about.html#education",
-    "title": "Finley Malloc",
-    "section": "Education",
-    "text": "Education\nSmith College | Northampton, MA Bachelors in Mathematics and Quantitatice Economics | Sept 2023 - May 2027"
-  },
-  {
-    "objectID": "about.html#experience",
-    "href": "about.html#experience",
-    "title": "Finley Malloc",
-    "section": "Experience",
-    "text": "Experience\nWengo Analytics | Head Data Scientist | April 2018 - present\nGeoScynce | Chief Analyst | Spet 2012 - April 2018"
-  },
-  {
-    "objectID": "projects/project-3-mapping-sabzara-tabitha/contributions.html",
-    "href": "projects/project-3-mapping-sabzara-tabitha/contributions.html",
-    "title": "SDS 192 Mini-Project 2 Contributions",
+    "objectID": "projects/project-3-mapping-sabzara-tabitha/copy.html",
+    "href": "projects/project-3-mapping-sabzara-tabitha/copy.html",
+    "title": "SDS 192 Project 3",
     "section": "",
-    "text": "Group Member 1: NAME\nSabzara Ali\n\n\nGroup Member 2: NAME\nTabitha Githinji\n\n\nGroup Member 3: NAME\nFill response here…"
+    "text": "Question: How does the distribution of Chipotle stores across the United States align with state populations? Additionally, when analyzing the proportion of stores relative to the total number of Chipotle locations and adjusting for population size, what insights can we uncover about factors influencing store placement, such as population density, urbanization, or regional economic activity\n\n# Include all libraries you may need for your project here. \n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.3     ✔ tidyr     1.3.1\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nlibrary(maps)\n\n\nAttaching package: 'maps'\n\nThe following object is masked from 'package:purrr':\n\n    map\n\nlibrary(ggplot2)\nlibrary(sf)\n\nLinking to GEOS 3.11.0, GDAL 3.5.3, PROJ 9.1.0; sf_use_s2() is TRUE\n\n\n\n# If you need to read in csv data do it here.\n\nchipotle_stores &lt;- read.csv(\"chipotle_stores.csv\")\n\nThis map displays the distribution of Chipotle stores across the United States\n\n# Group member 1 work here!\n# converting the chipotle data to shape file\nchipotle_sf &lt;- st_as_sf(chipotle_stores, \n                        coords = c(\"longitude\", \"latitude\"),\n                        crs = 4326)\n# creating the USA map\nUSA_map &lt;-  maps::map(\"state\", plot = FALSE, fill = TRUE)\nplot(USA_map)\n\n\n\n\n\n\n\n# Convert maps package map object to sf object using st_as_sf() again:\nUSA_sf &lt;- USA_map |&gt; \n  st_as_sf(coords = c(\"x\", \"y\"), crs = 4326)\n\n# Plot both layers:\nggplot() +\n  # Plot the USA map (USA_sf should already be an sf object)\n  geom_sf(data = USA_sf, fill = \"lightgray\", color = \"black\") +  \n  # Plot the Chipotle store locations on top of the USA map\n  geom_sf(data = chipotle_sf, aes(color = \"red\"), size = 2) +\n# remove axis ticks/label\n  theme(\n    axis.ticks.x = element_blank(),\n    axis.ticks.y = element_blank(),\n    axis.text.x = element_blank(),\n    axis.text.y = element_blank()\n  ) +\n  labs(\n    title = \"Chipotle Store Locations in the USA\",\n    color = \"Store Location\",\n    caption = \"Source: Chipotle store locations dataset from Kaggle\"\n  )\n\n\n\n\n\n\n\n\nIn this section, we aim to visualize the proportion of Chipotle stores in each state across the United States. To achieve this, we first create a population map to provide context and to ensure we don’t create the population map again.\nWe first create the population map of the United States.\n\n# Group member 2 work here!\n#Creating the population map\nUS_pop &lt;- \n  tidycensus::get_acs(\n    geography = \"state\",\n  variables = c(population = \"B01003_001\"),\n  geometry = TRUE\n  ) |&gt;\n  mutate(NAME = tolower(NAME))\n\nUS_pop|&gt;\n filter(NAME != \"alaska\")|&gt;\nggplot() +\n  geom_sf(aes(fill = estimate), color = \"white\", size = 0.2) +  \n  scale_fill_distiller(palette = \"YlOrRd\",\n                       direction = 1,\n                       name = \"Population\",\n                      labels = scales::comma\n                        ) +  \n  theme_minimal() +\n  labs(\n    title = \"Population by State in the United States\",\n    subtitle = \"Choropleth map of U.S. population\",\n    fill = \"Population\") +\n  theme(\n    axis.ticks.x = element_blank(),\n    axis.ticks.y = element_blank(),\n   # axis.text.x = element_blank(),\n    axis.text.y = element_blank()) +\n      \n    xlim(-130,-70)\n\n\n\n\n\n\n\n\nNext, we create a map displaying the proportion of Chipotle stores in each state relative to the total number of stores across the United States.\n\n# Creating showing the proportion of chipotle stores for each state\n\n#Custom function to calculate store proportions by state\n\ncalculate_proportion &lt;- function(df, total_stores) {\n  df |&gt;\n    group_by(state) |&gt;\n    summarise(\n      total_stores_per_state = n(),\n      proportion_each_state = (n() / total_stores) * 100\n    )\n}\n\n# Apply the custom function to calculate store proportions\ntotal_stores &lt;- nrow(chipotle_stores)  # Total number of stores in the dataset\nchipotle_stores_prop &lt;- calculate_proportion(chipotle_stores, total_stores)\n\n# Print the resulting data frame to check the results\nprint(chipotle_stores_prop)\n\n# A tibble: 48 × 3\n   state       total_stores_per_state proportion_each_state\n   &lt;chr&gt;                        &lt;int&gt;                 &lt;dbl&gt;\n 1 Alabama                         15                 0.571\n 2 Arizona                         85                 3.23 \n 3 Arkansas                         6                 0.228\n 4 California                     421                16.0  \n 5 Colorado                        79                 3.00 \n 6 Connecticut                     24                 0.913\n 7 Delaware                         9                 0.342\n 8 Florida                        177                 6.73 \n 9 Georgia                         61                 2.32 \n10 Idaho                            4                 0.152\n# ℹ 38 more rows\n\n# Load the USA map for plotting\nUSA_map &lt;- maps::map(\"state\", plot = FALSE, fill = TRUE)\n\n# States data to join with the chipotle data\nstates &lt;- as.data.frame(cbind(abrev = state.abb, lower_state = tolower(state.name), upper_state = state.name))\n\n# Join chipotle data with states to have lowercase state names for merging\nchipotle_stores_prop_lower &lt;- states |&gt;\n  inner_join(chipotle_stores_prop, by = c(\"upper_state\" = \"state\"))\n\n# Convert the map object to an sf object for plotting\nUSA_sf &lt;- USA_map |&gt;\n  st_as_sf(coords = c(\"x\", \"y\"), crs = 4326)\n\n# Join the map with chipotle store proportions\nUSA_map_joined &lt;- USA_sf |&gt;\n  left_join(chipotle_stores_prop_lower, by = c(\"ID\" = \"lower_state\")\n  )\n\ncreating the chloropleth map\n\n# Create choropleth map\nggplot() +\n  geom_sf(data = USA_map_joined, aes(fill = proportion_each_state)) + \n  scale_fill_distiller(palette = \"YlOrRd\", direction = 1, name = \"Proportion of Stores (%)\") +  \n  labs(\n    title = \"Proportion of Chipotle Stores by State in the United States\",\n    subtitle = \"Choropleth map showing the percentage of Chipotle stores per state relative to the total stores in US\",\n    caption = \"Data sourced from Chipotle store locations(kraggle) and U.S. Census population estimates.\") +\n  theme_minimal() +\n  theme(\n    panel.background = element_rect(fill = \"azure2\",\n                                    colour = \"black\",\n                                    size = 0.5),\n    panel.grid.major = element_blank(),\n    panel.grid.minor = element_blank(),\n    axis.ticks.x = element_blank(),\n    axis.ticks.y = element_blank(),\n    axis.text.x = element_blank(),\n    axis.text.y = element_blank()\n  ) \n\nWarning: The `size` argument of `element_rect()` is deprecated as of ggplot2 3.4.0.\nℹ Please use the `linewidth` argument instead.\n\n\n\n\n\n\n\n\n\nFrom the plot created, it is evident that the map closely resembles a population map, as it shows a similar distribution pattern across the states.\nTo create a map that accounts for population differences, we calculate the number of Chipotle stores per million residents in each state.\n\n# Calculate stores per million people for each state\nchipotle_stores_with_population &lt;- chipotle_stores_prop_lower |&gt;\n  inner_join(US_pop |&gt; select(NAME, estimate), by = c(\"lower_state\" = \"NAME\")) |&gt;\n  mutate(stores_per_million = (total_stores_per_state / estimate) * 1e6)\n# Merge population-adjusted data with USA map\nUSA_map_with_population &lt;- USA_sf |&gt;\n  left_join(chipotle_stores_with_population, by = c(\"ID\" = \"lower_state\"))\n# Create a map based on stores per million residents\nggplot() +\n  geom_sf(data = USA_map_with_population, aes(fill = stores_per_million)) +\n  scale_fill_distiller(palette = \"YlOrRd\", direction = 1, name = \"Stores per Million\") +\n  labs(\n    title = \"Chipotle Stores Adjusted for State Population\",\n    subtitle = \"Stores per Million Residents\",\n    caption = \"Data: Chipotle and US Census\"\n  ) +\n  theme_minimal() +\n  theme(\n    axis.ticks.x = element_blank(),\n    axis.ticks.y = element_blank(),\n    axis.text.x = element_blank(),\n    axis.text.y = element_blank(),\n    panel.background = element_rect(fill = \"lightblue\", color = \"black\"),\n    legend.position = \"bottom\"\n  )\n\n\n\n\n\n\n\n\n\n# Group member 3 work here!\n\n\nBlog post\nIn this project, we explored the distribution of Chipotle restaurants across the United States using geospatial analysis. Leveraging a dataset from Kaggle, which provides the location of every Chipotle restaurant in the country, we sought to understand the company’s location strategy. The dataset was uploaded by Jeffrey Braun, a UChicago graduate, who claimed to have scraped the data from the Chipotle website. (Braun 2020). Specifically, we aimed to analyze how Chipotle store locations are distributed in relation to state populations and to investigate whether store concentration correlates with population density.\nWe began by visualizing the locations of Chipotle restaurants on a U.S. map. This involved converting the dataset into a spatial format, enabling us to plot the coordinates of each store. The visualization revealed that Chipotle locations are primarily concentrated in urban centers, with states like California, New York, and Texas hosting the most stores. These states, with their high population densities and large urban hubs like Los Angeles, New York City, and Houston, naturally align with a higher number of Chipotle locations. To assess how population influences store distribution, we created a population map of the United States. This step was crucial as it provided a baseline for comparing the distribution of Chipotle locations to population data. From there, we developed a custom function to calculate each state’s proportion of Chipotle stores relative to the national total. Using this data, we created a choropleth map that graphically represented the store proportions, offering a clear depiction of states with higher or lower concentrations of Chipotle locations. The resulting map closely mirrored the population map, suggesting that states with larger populations generally host more Chipotle stores. However, we wanted to investigate further to determine if less-populated states had a comparable number of stores per million residents to more populous states.\nWe then took our analysis a step further by considering population-adjusted metrics. Recognizing that absolute store counts alone do not account for state population differences, we integrated U.S. Census data to calculate the number of Chipotle stores per million residents in each state. This approach allowed us to explore whether smaller states with lower populations had comparable store density to larger, more populous states. Using this new proportion, we created another choropleth map to visualize the distribution of Chipotle stores on a per-capita basis, offering a more balanced view of store density relative to population size. The population-adjusted analysis highlights interesting patterns. States with, such as Minnesota, Ohio, and Pennsylvania, have a proportionally higher number of Chipotle stores per capita, even if their total store counts are relatively modest. On the other hand, some highly populated states have a relatively lower store density per capita, despite hosting a large number of locations overall. This suggests that Chipotle’s placement strategy is not solely driven by population size but also considers other factors such as high-traffic urban centers, economic activity, and potentially regional preferences.\nOur findings align with insights from Jordan Bean’s study, which highlights Chipotle’s strategic focus on urban centers in high-density areas while also noting a recent shift toward suburban areas (Bean 2023). This strategic adaptation may reflect evolving trends, such as population migration and hybrid work patterns, as Chipotle seeks to expand its reach into new markets.\nIn conclusion, this project highlights the value of integrating geospatial and demographic analysis to understand business strategies. By creating maps that account for both absolute store counts and population-adjusted metrics, we uncovered patterns that reveal the brand’s strategic focus on urban areas and densely populated states. These findings can help inform business decisions of Chipotle and other brands, from identifying growth opportunities to refining location strategies. Lastly, this project highlights how geospatial tools and demographic data in R can be applied to real-world problems, offering practical insights for optimizing retail operations and enhancing strategic planning.\n\n\n\n\n\nReferences\n\nBean, Jordan. 2023. “Beyond the Burrito: The Analytics Behind Chipotle’s Location Strategy.” Medium, May. https://jordanbean.medium.com/the-analytics-behind-chipotles-location-strategy-2d91a23fd66.\n\n\nBraun, Jeffrey. 2020. “Chipotle Locations: A CSV File for All Chipotle Locations in the US.” https://www.kaggle.com/jeffreybraun/chipotle-locations."
   },
   {
-    "objectID": "projects/project-3-mapping-sabzara-tabitha/standards.html",
-    "href": "projects/project-3-mapping-sabzara-tabitha/standards.html",
-    "title": "SDS 192 Mini-Project 2 Standards",
+    "objectID": "projects/project-3-mapping-sabzara-tabitha/data_for_mapping.html",
+    "href": "projects/project-3-mapping-sabzara-tabitha/data_for_mapping.html",
+    "title": "Ideas for Mapping Data",
     "section": "",
-    "text": "Iteration\nWe used iteration to efficiently calculate the store proportions per state by grouping and summarizing the data with group_by() and summarise().\n\n\nFunction creation\nWe created a custom function, calculate_proportion(), to calculate the proportion of stores in each state, streamlining our analysis and making it reusable for future tasks. # Data Wrangling on multiple tables.\nWe merged Chipotle store data with population data using inner_join() to calculate the proportion of stores per state relative to population, providing meaningful insights into store distribution.\n\n\nMapping\nWe created choropleth maps using ggplot2 to visualize the distribution of Chipotle stores and their proportions in each state, layering this with population density data to compare the store concentration across the U.S."
+    "text": "There is a lot of data in the world, pick a set that you are comfortable with by the end of the first project day. You can go down a rabbit hole after the semester is over."
   },
   {
-    "objectID": "projects/project-1-sabzara-alex/group-contract.html",
-    "href": "projects/project-1-sabzara-alex/group-contract.html",
-    "title": "SDS 192 Group Contract",
+    "objectID": "projects/project-3-mapping-sabzara-tabitha/data_for_mapping.html#caution",
+    "href": "projects/project-3-mapping-sabzara-tabitha/data_for_mapping.html#caution",
+    "title": "Ideas for Mapping Data",
     "section": "",
-    "text": "Working in groups can be both incredibly rewarding and incredibly challenging. The most effective collaborations explicitly outline group roles, expectations, and procedures in advance to coordinate how the group will operate, to establish mechanisms of accountability, and to mitigate the risk of conflict. It is important that, throughout the semester, you address group concerns as they come up. This may involve assigning someone to check in with team members that are falling behind, establishing expectations for attending office hours and asking for help, calling team meetings to discuss issues, or reaching out to the instructor to resolve enduring and unresolved conflicts."
+    "text": "There is a lot of data in the world, pick a set that you are comfortable with by the end of the first project day. You can go down a rabbit hole after the semester is over."
   },
   {
-    "objectID": "projects/project-1-sabzara-alex/group-contract.html#who-will-be-responsible-for-scheduling-meetings-and-hosting-zoom-calls",
-    "href": "projects/project-1-sabzara-alex/group-contract.html#who-will-be-responsible-for-scheduling-meetings-and-hosting-zoom-calls",
-    "title": "SDS 192 Group Contract",
-    "section": "Who will be responsible for scheduling meetings and hosting Zoom calls?",
-    "text": "Who will be responsible for scheduling meetings and hosting Zoom calls?\nAlex"
+    "objectID": "projects/project-3-mapping-sabzara-tabitha/data_for_mapping.html#map-data-ideas-for-project-3",
+    "href": "projects/project-3-mapping-sabzara-tabitha/data_for_mapping.html#map-data-ideas-for-project-3",
+    "title": "Ideas for Mapping Data",
+    "section": "Map data ideas for project 3",
+    "text": "Map data ideas for project 3\n\nEPA Toxic Release Inventory (TRI)\nhttps://www.epa.gov/toxics-release-inventory-tri-program/tri-basic-data-files-calendar-years-1987-present\n\n\nCDC Flu View Interactive.\nhttps://gis.cdc.gov/grasp/fluview/fluportaldashboard.html\n\n\nMassachusetts GIS Data\nhttps://www.mass.gov/info-details/massgis-data-layers\nOther states also have GIS Data\n\n\nSearch Geo Spatial Analysis on Kaggle\nhttps://www.kaggle.com/datasets?sort=usability&tags=13206-Geospatial+Analysis\n(Sort by usability)"
   },
   {
-    "objectID": "projects/project-1-sabzara-alex/group-contract.html#who-will-be-responsible-for-facilitating-discussion-during-team-meetings",
-    "href": "projects/project-1-sabzara-alex/group-contract.html#who-will-be-responsible-for-facilitating-discussion-during-team-meetings",
-    "title": "SDS 192 Group Contract",
-    "section": "Who will be responsible for facilitating discussion during team meetings?",
-    "text": "Who will be responsible for facilitating discussion during team meetings?\nSabzara"
-  },
-  {
-    "objectID": "projects/project-1-sabzara-alex/group-contract.html#who-will-be-responsible-for-taking-notes-and-recording-decisions-during-meetings",
-    "href": "projects/project-1-sabzara-alex/group-contract.html#who-will-be-responsible-for-taking-notes-and-recording-decisions-during-meetings",
-    "title": "SDS 192 Group Contract",
-    "section": "Who will be responsible for taking notes and recording decisions during meetings?",
-    "text": "Who will be responsible for taking notes and recording decisions during meetings?\nAlex"
-  },
-  {
-    "objectID": "projects/project-1-sabzara-alex/group-contract.html#who-will-be-responsible-for-emailing-the-professor-with-questions",
-    "href": "projects/project-1-sabzara-alex/group-contract.html#who-will-be-responsible-for-emailing-the-professor-with-questions",
-    "title": "SDS 192 Group Contract",
-    "section": "Who will be responsible for emailing the professor with questions?",
-    "text": "Who will be responsible for emailing the professor with questions?\nAlex"
-  },
-  {
-    "objectID": "projects/project-1-sabzara-alex/group-contract.html#who-will-be-responsible-for-requesting-group-assignment-extensions",
-    "href": "projects/project-1-sabzara-alex/group-contract.html#who-will-be-responsible-for-requesting-group-assignment-extensions",
-    "title": "SDS 192 Group Contract",
-    "section": "Who will be responsible for requesting group assignment extensions?",
-    "text": "Who will be responsible for requesting group assignment extensions?\nSabzara"
-  },
-  {
-    "objectID": "projects/project-1-sabzara-alex/group-contract.html#who-will-be-responsible-for-setting-deadlines-for-drafts",
-    "href": "projects/project-1-sabzara-alex/group-contract.html#who-will-be-responsible-for-setting-deadlines-for-drafts",
-    "title": "SDS 192 Group Contract",
-    "section": "Who will be responsible for setting deadlines for drafts?",
-    "text": "Who will be responsible for setting deadlines for drafts?\nSabzara"
-  },
-  {
-    "objectID": "projects/project-1-sabzara-alex/group-contract.html#who-will-be-responsible-for-checking-in-with-team-members-when-drafts-are-late",
-    "href": "projects/project-1-sabzara-alex/group-contract.html#who-will-be-responsible-for-checking-in-with-team-members-when-drafts-are-late",
-    "title": "SDS 192 Group Contract",
-    "section": "Who will be responsible for checking in with team members when drafts are late?",
-    "text": "Who will be responsible for checking in with team members when drafts are late?\nAlex"
-  },
-  {
-    "objectID": "projects/project-1-sabzara-alex/group-contract.html#who-will-be-responsible-for-reviewing-all-materials-before-submission",
-    "href": "projects/project-1-sabzara-alex/group-contract.html#who-will-be-responsible-for-reviewing-all-materials-before-submission",
-    "title": "SDS 192 Group Contract",
-    "section": "Who will be responsible for reviewing all materials before submission?",
-    "text": "Who will be responsible for reviewing all materials before submission?"
-  },
-  {
-    "objectID": "projects/project-1-sabzara-alex/group-contract.html#who-will-be-responsible-for-submitting-assignments",
-    "href": "projects/project-1-sabzara-alex/group-contract.html#who-will-be-responsible-for-submitting-assignments",
-    "title": "SDS 192 Group Contract",
-    "section": "Who will be responsible for submitting assignments?",
-    "text": "Who will be responsible for submitting assignments?\nSabzara, Alex"
-  },
-  {
-    "objectID": "projects/project-1-sabzara-alex/group-contract.html#who-will-be-responsible-for-submitting-assignments-1",
-    "href": "projects/project-1-sabzara-alex/group-contract.html#who-will-be-responsible-for-submitting-assignments-1",
-    "title": "SDS 192 Group Contract",
-    "section": "Who will be responsible for submitting assignments?",
-    "text": "Who will be responsible for submitting assignments?\nSabzara"
-  },
-  {
-    "objectID": "projects/project-1-sabzara-alex/group-contract.html#where-will-the-team-keep-meeting-notes",
-    "href": "projects/project-1-sabzara-alex/group-contract.html#where-will-the-team-keep-meeting-notes",
-    "title": "SDS 192 Group Contract",
-    "section": "Where will the team keep meeting notes?",
-    "text": "Where will the team keep meeting notes?\nGoogle Drive"
-  },
-  {
-    "objectID": "projects/project-1-sabzara-alex/group-contract.html#where-will-the-team-store-drafts-of-assignments",
-    "href": "projects/project-1-sabzara-alex/group-contract.html#where-will-the-team-store-drafts-of-assignments",
-    "title": "SDS 192 Group Contract",
-    "section": "Where will the team store drafts of assignments?",
-    "text": "Where will the team store drafts of assignments?\nGoogle Drive"
-  },
-  {
-    "objectID": "projects/project-1-sabzara-alex/group-contract.html#through-what-channels-will-the-team-communicate-when-not-meeting",
-    "href": "projects/project-1-sabzara-alex/group-contract.html#through-what-channels-will-the-team-communicate-when-not-meeting",
-    "title": "SDS 192 Group Contract",
-    "section": "Through what channels will the team communicate when not meeting?",
-    "text": "Through what channels will the team communicate when not meeting?\nSlack"
-  },
-  {
-    "objectID": "projects/project-1-sabzara-alex/group-contract.html#what-is-the-expected-response-time-for-emails-and-messages",
-    "href": "projects/project-1-sabzara-alex/group-contract.html#what-is-the-expected-response-time-for-emails-and-messages",
-    "title": "SDS 192 Group Contract",
-    "section": "What is the expected response time for emails and messages?",
-    "text": "What is the expected response time for emails and messages?\n12 Hrs"
-  },
-  {
-    "objectID": "projects/project-1-sabzara-alex/group-contract.html#how-often-will-the-team-meet",
-    "href": "projects/project-1-sabzara-alex/group-contract.html#how-often-will-the-team-meet",
-    "title": "SDS 192 Group Contract",
-    "section": "How often will the team meet?",
-    "text": "How often will the team meet?\n3 times"
-  },
-  {
-    "objectID": "projects/project-1-sabzara-alex/group-contract.html#what-daystimes-will-the-team-meet",
-    "href": "projects/project-1-sabzara-alex/group-contract.html#what-daystimes-will-the-team-meet",
-    "title": "SDS 192 Group Contract",
-    "section": "What days/times will the team meet?",
-    "text": "What days/times will the team meet?\nThis weekend - TBD\nThursday - TBD\nFriday/Saturday - TBD"
-  },
-  {
-    "objectID": "projects/project-1-sabzara-alex/group-contract.html#how-long-will-meetings-be",
-    "href": "projects/project-1-sabzara-alex/group-contract.html#how-long-will-meetings-be",
-    "title": "SDS 192 Group Contract",
-    "section": "How long will meetings be?",
-    "text": "How long will meetings be?\nAround 1 hr"
-  },
-  {
-    "objectID": "projects/project-1-sabzara-alex/group-contract.html#how-will-you-make-decisions-during-meetings-e.g.-consensus-a-vote",
-    "href": "projects/project-1-sabzara-alex/group-contract.html#how-will-you-make-decisions-during-meetings-e.g.-consensus-a-vote",
-    "title": "SDS 192 Group Contract",
-    "section": "How will you make decisions during meetings (e.g. consensus, a vote)?",
-    "text": "How will you make decisions during meetings (e.g. consensus, a vote)?\nConsensus"
-  },
-  {
-    "objectID": "projects/project-1-sabzara-alex/group-contract.html#what-strategies-will-you-use-to-stay-on-task-during-meetings",
-    "href": "projects/project-1-sabzara-alex/group-contract.html#what-strategies-will-you-use-to-stay-on-task-during-meetings",
-    "title": "SDS 192 Group Contract",
-    "section": "What strategies will you use to stay on task during meetings?",
-    "text": "What strategies will you use to stay on task during meetings?\ngo through our task list."
-  },
-  {
-    "objectID": "projects/project-1-sabzara-alex/group-contract.html#how-should-team-members-inform-each-other-if-they-are-going-to-be-late-to-a-meeting",
-    "href": "projects/project-1-sabzara-alex/group-contract.html#how-should-team-members-inform-each-other-if-they-are-going-to-be-late-to-a-meeting",
-    "title": "SDS 192 Group Contract",
-    "section": "How should team members inform each other if they are going to be late to a meeting?",
-    "text": "How should team members inform each other if they are going to be late to a meeting?\nslack"
-  },
-  {
-    "objectID": "projects/project-1-sabzara-alex/group-contract.html#when-is-it-ok-for-a-team-member-to-skip-a-meeting-how-soon-should-they-inform-the-group",
-    "href": "projects/project-1-sabzara-alex/group-contract.html#when-is-it-ok-for-a-team-member-to-skip-a-meeting-how-soon-should-they-inform-the-group",
-    "title": "SDS 192 Group Contract",
-    "section": "When is it ok for a team member to skip a meeting? How soon should they inform the group?",
-    "text": "When is it ok for a team member to skip a meeting? How soon should they inform the group?\n2-3 hours"
-  },
-  {
-    "objectID": "projects/project-1-sabzara-alex/group-contract.html#what-will-you-do-if-a-group-member-is-chronically-absent-from-or-late-to-meetings",
-    "href": "projects/project-1-sabzara-alex/group-contract.html#what-will-you-do-if-a-group-member-is-chronically-absent-from-or-late-to-meetings",
-    "title": "SDS 192 Group Contract",
-    "section": "What will you do if a group member is chronically absent from or late to meetings?",
-    "text": "What will you do if a group member is chronically absent from or late to meetings?\ntalk let the professor know"
-  },
-  {
-    "objectID": "projects/project-1-sabzara-alex/group-contract.html#what-will-you-do-if-a-group-member-is-consistently-not-participating-in-meetings",
-    "href": "projects/project-1-sabzara-alex/group-contract.html#what-will-you-do-if-a-group-member-is-consistently-not-participating-in-meetings",
-    "title": "SDS 192 Group Contract",
-    "section": "What will you do if a group member is consistently not participating in meetings?",
-    "text": "What will you do if a group member is consistently not participating in meetings?\ntalk let the professor know"
-  },
-  {
-    "objectID": "projects/project-1-sabzara-alex/group-contract.html#what-are-your-expectations-for-respectful-engagement-and-communication-during-meetings-and-in-collaborative-workspaces-what-will-you-do-if-a-member-of-your-team-does-not-meet-these-expectations",
-    "href": "projects/project-1-sabzara-alex/group-contract.html#what-are-your-expectations-for-respectful-engagement-and-communication-during-meetings-and-in-collaborative-workspaces-what-will-you-do-if-a-member-of-your-team-does-not-meet-these-expectations",
-    "title": "SDS 192 Group Contract",
-    "section": "What are your expectations for respectful engagement and communication during meetings and in collaborative workspaces? What will you do if a member of your team does not meet these expectations?",
-    "text": "What are your expectations for respectful engagement and communication during meetings and in collaborative workspaces? What will you do if a member of your team does not meet these expectations?\nFILL ME"
-  },
-  {
-    "objectID": "projects/project-1-sabzara-alex/group-contract.html#how-will-you-ensure-that-all-team-members-fully-understand-assignment-expectations-what-will-you-do-if-your-team-is-unsure-how-to-complete-an-assignment",
-    "href": "projects/project-1-sabzara-alex/group-contract.html#how-will-you-ensure-that-all-team-members-fully-understand-assignment-expectations-what-will-you-do-if-your-team-is-unsure-how-to-complete-an-assignment",
-    "title": "SDS 192 Group Contract",
-    "section": "How will you ensure that all team members fully understand assignment expectations? What will you do if your team is unsure how to complete an assignment?",
-    "text": "How will you ensure that all team members fully understand assignment expectations? What will you do if your team is unsure how to complete an assignment?\nFILL ME"
-  },
-  {
-    "objectID": "projects/project-1-sabzara-alex/group-contract.html#how-will-you-ensure-that-all-team-members-are-contributing-equitably-to-assignments",
-    "href": "projects/project-1-sabzara-alex/group-contract.html#how-will-you-ensure-that-all-team-members-are-contributing-equitably-to-assignments",
-    "title": "SDS 192 Group Contract",
-    "section": "How will you ensure that all team members are contributing equitably to assignments?",
-    "text": "How will you ensure that all team members are contributing equitably to assignments?\nFILL ME"
-  },
-  {
-    "objectID": "projects/project-1-sabzara-alex/group-contract.html#how-soon-in-advance-of-deadlines-do-you-expect-all-team-members-to-share-drafts-of-their-work",
-    "href": "projects/project-1-sabzara-alex/group-contract.html#how-soon-in-advance-of-deadlines-do-you-expect-all-team-members-to-share-drafts-of-their-work",
-    "title": "SDS 192 Group Contract",
-    "section": "How soon in advance of deadlines do you expect all team members to share drafts of their work?",
-    "text": "How soon in advance of deadlines do you expect all team members to share drafts of their work?\nFILL ME"
-  },
-  {
-    "objectID": "projects/project-1-sabzara-alex/group-contract.html#what-will-be-your-process-for-reviewing-each-others-work-before-submission",
-    "href": "projects/project-1-sabzara-alex/group-contract.html#what-will-be-your-process-for-reviewing-each-others-work-before-submission",
-    "title": "SDS 192 Group Contract",
-    "section": "What will be your process for reviewing each other’s work before submission?",
-    "text": "What will be your process for reviewing each other’s work before submission?\nCheck each others work."
-  },
-  {
-    "objectID": "projects/project-1-sabzara-alex/group-contract.html#what-will-you-do-if-the-quality-of-a-team-members-work-does-not-meet-the-groups-expectations-when-is-it-permissible-to-revise-another-team-members-work",
-    "href": "projects/project-1-sabzara-alex/group-contract.html#what-will-you-do-if-the-quality-of-a-team-members-work-does-not-meet-the-groups-expectations-when-is-it-permissible-to-revise-another-team-members-work",
-    "title": "SDS 192 Group Contract",
-    "section": "What will you do if the quality of a team member’s work does not meet the group’s expectations? When is it permissible to revise another team member’s work?",
-    "text": "What will you do if the quality of a team member’s work does not meet the group’s expectations? When is it permissible to revise another team member’s work?\nAsk the team member"
-  },
-  {
-    "objectID": "projects/project-1-sabzara-alex/group-contract.html#what-are-your-expectations-around-punctuality-regarding-group-deadlines-how-should-team-members-inform-each-other-if-they-need-an-extension",
-    "href": "projects/project-1-sabzara-alex/group-contract.html#what-are-your-expectations-around-punctuality-regarding-group-deadlines-how-should-team-members-inform-each-other-if-they-need-an-extension",
-    "title": "SDS 192 Group Contract",
-    "section": "What are your expectations around punctuality regarding group deadlines? How should team members inform each other if they need an extension?",
-    "text": "What are your expectations around punctuality regarding group deadlines? How should team members inform each other if they need an extension?\nFILL ME"
-  },
-  {
-    "objectID": "projects/project-1-sabzara-alex/group-contract.html#what-will-you-do-if-a-student-is-consistently-late-in-submitting-draft-work",
-    "href": "projects/project-1-sabzara-alex/group-contract.html#what-will-you-do-if-a-student-is-consistently-late-in-submitting-draft-work",
-    "title": "SDS 192 Group Contract",
-    "section": "What will you do if a student is consistently late in submitting draft work?",
-    "text": "What will you do if a student is consistently late in submitting draft work?\ntalk to them and talk to professor"
-  },
-  {
-    "objectID": "projects/project-1-sabzara-alex/group-contract.html#what-will-you-do-if-you-discover-that-a-team-members-work-violates-the-academic-code-of-conduct",
-    "href": "projects/project-1-sabzara-alex/group-contract.html#what-will-you-do-if-you-discover-that-a-team-members-work-violates-the-academic-code-of-conduct",
-    "title": "SDS 192 Group Contract",
-    "section": "What will you do if you discover that a team member’s work violates the Academic Code of Conduct?",
-    "text": "What will you do if you discover that a team member’s work violates the Academic Code of Conduct?\nFILL ME"
-  },
-  {
-    "objectID": "projects/project-1-sabzara-alex/blog post.html",
-    "href": "projects/project-1-sabzara-alex/blog post.html",
-    "title": "blog post",
+    "objectID": "projects/project-1-sabzara-alex/contributions.html",
+    "href": "projects/project-1-sabzara-alex/contributions.html",
+    "title": "SDS 192 Mini-Project 1 Contributions",
     "section": "",
-    "text": "The College Scorecard project was developed by the U.S. Department of Education, including insights into the cost, performance, and outcomes of colleges, allowing users to weigh trade-offs and make informed decisions based on their educational needs and goals. The data is derived from multiple sources, including institutional reports through the Integrated Postsecondary Education Data System (IPEDS). All the variables selected for the given visualizations come from IPEDS. IPEDS gathers information from every institution that participates in the federal student financial aid programs. For this project, we are working to explore the relationship between the percentage of business degrees offered, the cost of attending various schools, and the number of students in high-income brackets ten years after enrolling in school and not currently enrolled. Specifically, we sought to understand how financially affordable schools with a focus on STEM degrees are and whether attending these institutions increases the likelihood of graduates achieving higher income levels. For the bar graph, the percentage of STEM and business degrees offered by each institution were compared with that with the number of students who, 10 years after entry, are earning in the highest income bracket (≥ $75,001). For the scatter plot, the percentage of degrees awarded in STEM and business were compared with the cost to attend each institution. The range for degrees awarded is from 0% to 100%. The range for the cost to attend per academic year is from $0 per year to $80,000 per year. The first bar plot analyzes the STEM_Business variable. A distinct trend emerges: institutions that award a higher percentage of degrees in STEM and business fields are associated with a greater number of students earning over $75,000 ten years after enrollment. Specifically, institutions with more than 40% of degrees in these disciplines report over 500 individuals in the high-income bracket, whereas those with lower percentages of STEM and business degrees have fewer than 300 high-income earners. This finding suggests graduates from STEM- and business-focused schools have better financial prospects, suggesting these paths boost long-term earning potential.\nThe scatter plot determines that the percentage of degrees awarded in STEM and business has a positive relationship with the cost to attend each institution. This is emphasized by the trendline. Schools with a heavy emphasis on the humanities, producing close to zero percentage of degrees awarded in STEM and business, cost a median of $17,000 per academic year. This is converse schools with a heavy emphasis on STEM and business, producing a close to 100% of degrees awarded in STEM and business cost a median of about $69,000 per year.\nThe above analysis indicates that low-income individuals have limited access to institutions offering STEM and business degrees, while students attending these schools tend to achieve higher income levels. The higher costs associated with STEM programs may exacerbate income inequality, making it difficult for lower-income students to pursue these fields and improve their financial prospects. This highlights a path for policymakers to address educational and economic inequity by improving access to STEM and business programs for low-income students However, ethical concerns must be acknowledged. We did not examine whether these institutions provide federal aid, which could impact access for low-income students. It is also possible that students from higher-income families attend these schools and achieve higher incomes because of their background. Their financial success may not solely be attributed to their STEM and business degrees. Our dataset focuses primarily on institutions with mid-high enrollment sizes in Massachusetts, particularly in the Boston region, which may not fully represent trends at smaller LACs. This analysis may unintentionally marginalize institutions offering strong employment prospects in non-STEM fields, potentially overlooking viable career paths for diverse student populations."
+    "text": "Group Member 1 Sabzara\nWe went thrugh the data dictionary and technical guide. I made the Stem_business variable using different variables. I also created the PLOT 1 which is Bar Graph. I also contributed to Blog post by working on introduction , analysis and Limitations.\n\n\nAlex\nI sorted through data, eventually finding the variables for and making the scatter plot. I also contributed to the blog post by editing it for revisions and contributing to the introduction and analysis of the scatter plot.\n\n\nGroup Member 3\nFill response here…"
+  },
+  {
+    "objectID": "projects/project-1-sabzara-alex/standards.html",
+    "href": "projects/project-1-sabzara-alex/standards.html",
+    "title": "SDS 192 Mini-Project 1 Standards",
+    "section": "",
+    "text": "Understanding Datasets\nWe started by reading the Data Dictionary carefully. We used variables from the data dictionary to create a new “STEM_Business” variable, representing the percentage of degrees offered in STEM and business. A bar graph was generated, with the x-axis limited to selected institutions using scale_x_discrete. We ensured consistency by selecting schools of similar size as count_wne_inc3_10 gave us number of students earning in high-income brackets. Labels were clarified by mutating “University of Massachusetts-Boston” to “UMASS Boston” and applying coord_flip for readability. Finally, we used geom_bar for creating bar graph and geom_point for scatter plots\n\n\nVisualization Aesthetics\nAdjusting the graphs to present better visually demonstrate our fluency of visualization aesthetics. For example, for the bar plot we used colors that clearly displayed the variation in earnings, and we used varying colors between the trend-line and the scatter plot to clearly display the trend. We also used concise names for the graphs, and make sure to include subtitles and captions to space out information clearly.\n\n\nPlotting Frequencies and Distributions\nPlotting the distributions along the scatter plot and determining which data to use demonstrated our knowledge and plotting frequencies and distributions. For example, when debating just plotting the schools we used in our bar plot or a larger range, we decided that using all MA institutions with provided data would show a more realistic distribution of data compared to a handpicked group of institutions."
   },
   {
     "objectID": "projects/project-1-sabzara-alex/blogpost.html",
@@ -299,6 +89,20 @@
     "title": "SDS 192 Mini-Project 2 Contributions",
     "section": "",
     "text": "Group Member 1: NAME\nI made the first plot and graph. I also worked on introduction, findings on th blogpost.\n\n\nGroup Member 2: Alex\nFill response here…\n\n\nGroup Member 3: NAME\nFill response here…"
+  },
+  {
+    "objectID": "projects/project-2-fec-sabzara-alex/fec-analysis.html",
+    "href": "projects/project-2-fec-sabzara-alex/fec-analysis.html",
+    "title": "FEC Analysis",
+    "section": "",
+    "text": "This project analyzes the relationship between campaign contributions and election results for the U.S. House of Representatives in New Jersey during the 2016 election cycle. Using data from the Federal Election Commission (FEC), we explore how contributions from various committees influenced the success of candidates, shedding light on the impact of financial support in determining election outcomes.\n\n\nThis plot visualizes the total contributions made to candidates grouped by the winning status (won or lost) and committee designation.\n\n\n\nTotal Contributions by Winning Status\n\n\nwon\ntotal_contribution_amt\n\n\n\n\nFALSE\n5406606\n\n\nTRUE\n11460967\n\n\n\nSource:  Federal Election Commission\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThis table displays candidates, whether they won or lost, the types of transactions associated with their campaigns, and the total transaction amounts.\n\n\n\nCandidate Contributions by Winning Status and Transaction Types\n\n\ncand_name\ntransaction_tp\nwon\ntotal\n\n\n\n\nCOLE, DAVID HAGERTY\n24K\nFALSE\n1000\n\n\nCOLEMAN, BONNIE WATSON\n24E\nTRUE\n20\n\n\nCOLEMAN, BONNIE WATSON\n24K\nTRUE\n523035\n\n\nFRELINGHUYSEN, RODNEY P.\n24E\nTRUE\n48\n\n\nFRELINGHUYSEN, RODNEY P.\n24K\nTRUE\n915210\n\n\nFRELINGHUYSEN, RODNEY P.\n24Z\nTRUE\n7889\n\n\nGARRETT, SCOTT REP.\n24A\nFALSE\n4276731\n\n\nGARRETT, SCOTT REP.\n24C\nFALSE\n93710\n\n\nGARRETT, SCOTT REP.\n24E\nFALSE\n335388\n\n\nGARRETT, SCOTT REP.\n24F\nFALSE\n2350\n\n\nGARRETT, SCOTT REP.\n24K\nFALSE\n668881\n\n\nGARRETT, SCOTT REP.\n24Z\nFALSE\n5247\n\n\nGOTTHEIMER, JOSH\n24A\nTRUE\n30000\n\n\nGOTTHEIMER, JOSH\n24C\nTRUE\n96200\n\n\nGOTTHEIMER, JOSH\n24E\nTRUE\n1930852\n\n\nGOTTHEIMER, JOSH\n24F\nTRUE\n55514\n\n\nGOTTHEIMER, JOSH\n24K\nTRUE\n646002\n\n\nGOTTHEIMER, JOSH\n24Z\nTRUE\n2351\n\n\nJACOB, PETER MR.\n24K\nFALSE\n6348\n\n\nLANCE, LEONARD\n24E\nTRUE\n13400\n\n\nLANCE, LEONARD\n24F\nTRUE\n2158\n\n\nLANCE, LEONARD\n24K\nTRUE\n671912\n\n\nLANCE, LEONARD\n24Z\nTRUE\n1100\n\n\nLAW, ALEXANDER\n24E\nFALSE\n9821\n\n\nLOBIONDO, FRANK A.\n24E\nTRUE\n18069\n\n\nLOBIONDO, FRANK A.\n24K\nTRUE\n1144426\n\n\nLOBIONDO, FRANK A.\n24Z\nTRUE\n1557\n\n\nMACARTHUR, THOMAS\n24E\nTRUE\n2445\n\n\nMACARTHUR, THOMAS\n24F\nTRUE\n2312\n\n\nMACARTHUR, THOMAS\n24K\nTRUE\n844833\n\n\nMACARTHUR, THOMAS\n24Z\nTRUE\n745\n\n\nNORCROSS, DONALD W\n24E\nTRUE\n216542\n\n\nNORCROSS, DONALD W\n24K\nTRUE\n857546\n\n\nNORCROSS, DONALD W\n24Z\nTRUE\n2513\n\n\nPALLONE, FRANK JR\n24E\nTRUE\n20\n\n\nPALLONE, FRANK JR\n24K\nTRUE\n1590863\n\n\nPALLONE, FRANK JR\n24Z\nTRUE\n1420\n\n\nPASCRELL, WILLIAM J. HON.\n24E\nTRUE\n10\n\n\nPASCRELL, WILLIAM J. HON.\n24K\nTRUE\n918850\n\n\nPATTERSON, ROBERT W.\n24K\nFALSE\n5000\n\n\nPAYNE, DONALD M., JR.\n24E\nTRUE\n20\n\n\nPAYNE, DONALD M., JR.\n24K\nTRUE\n345450\n\n\nSIRES, ALBIO\n24E\nTRUE\n10\n\n\nSIRES, ALBIO\n24K\nTRUE\n353850\n\n\nSMITH, CHRISTOPHER H\n24E\nTRUE\n9508\n\n\nSMITH, CHRISTOPHER H\n24K\nTRUE\n249287\n\n\nSMITH, CHRISTOPHER H\n24Z\nTRUE\n5000\n\n\nSONNEK-SCHMELZ, BRENT J\n24K\nFALSE\n2100\n\n\n\nSource:  Federal Election Commission\n\n\n\n\n\nNote: a Transaction types include various contributions made to or against candidates. Descriptions can be found on FEC: https://www.fec.gov/campaign-finance-data/transaction-type-code-descriptions/"
+  },
+  {
+    "objectID": "projects/project-2-fec-sabzara-alex/fec-analysis.html#campaign-contributions-and-election-outcomes",
+    "href": "projects/project-2-fec-sabzara-alex/fec-analysis.html#campaign-contributions-and-election-outcomes",
+    "title": "FEC Analysis",
+    "section": "",
+    "text": "This project analyzes the relationship between campaign contributions and election results for the U.S. House of Representatives in New Jersey during the 2016 election cycle. Using data from the Federal Election Commission (FEC), we explore how contributions from various committees influenced the success of candidates, shedding light on the impact of financial support in determining election outcomes.\n\n\nThis plot visualizes the total contributions made to candidates grouped by the winning status (won or lost) and committee designation.\n\n\n\nTotal Contributions by Winning Status\n\n\nwon\ntotal_contribution_amt\n\n\n\n\nFALSE\n5406606\n\n\nTRUE\n11460967\n\n\n\nSource:  Federal Election Commission\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThis table displays candidates, whether they won or lost, the types of transactions associated with their campaigns, and the total transaction amounts.\n\n\n\nCandidate Contributions by Winning Status and Transaction Types\n\n\ncand_name\ntransaction_tp\nwon\ntotal\n\n\n\n\nCOLE, DAVID HAGERTY\n24K\nFALSE\n1000\n\n\nCOLEMAN, BONNIE WATSON\n24E\nTRUE\n20\n\n\nCOLEMAN, BONNIE WATSON\n24K\nTRUE\n523035\n\n\nFRELINGHUYSEN, RODNEY P.\n24E\nTRUE\n48\n\n\nFRELINGHUYSEN, RODNEY P.\n24K\nTRUE\n915210\n\n\nFRELINGHUYSEN, RODNEY P.\n24Z\nTRUE\n7889\n\n\nGARRETT, SCOTT REP.\n24A\nFALSE\n4276731\n\n\nGARRETT, SCOTT REP.\n24C\nFALSE\n93710\n\n\nGARRETT, SCOTT REP.\n24E\nFALSE\n335388\n\n\nGARRETT, SCOTT REP.\n24F\nFALSE\n2350\n\n\nGARRETT, SCOTT REP.\n24K\nFALSE\n668881\n\n\nGARRETT, SCOTT REP.\n24Z\nFALSE\n5247\n\n\nGOTTHEIMER, JOSH\n24A\nTRUE\n30000\n\n\nGOTTHEIMER, JOSH\n24C\nTRUE\n96200\n\n\nGOTTHEIMER, JOSH\n24E\nTRUE\n1930852\n\n\nGOTTHEIMER, JOSH\n24F\nTRUE\n55514\n\n\nGOTTHEIMER, JOSH\n24K\nTRUE\n646002\n\n\nGOTTHEIMER, JOSH\n24Z\nTRUE\n2351\n\n\nJACOB, PETER MR.\n24K\nFALSE\n6348\n\n\nLANCE, LEONARD\n24E\nTRUE\n13400\n\n\nLANCE, LEONARD\n24F\nTRUE\n2158\n\n\nLANCE, LEONARD\n24K\nTRUE\n671912\n\n\nLANCE, LEONARD\n24Z\nTRUE\n1100\n\n\nLAW, ALEXANDER\n24E\nFALSE\n9821\n\n\nLOBIONDO, FRANK A.\n24E\nTRUE\n18069\n\n\nLOBIONDO, FRANK A.\n24K\nTRUE\n1144426\n\n\nLOBIONDO, FRANK A.\n24Z\nTRUE\n1557\n\n\nMACARTHUR, THOMAS\n24E\nTRUE\n2445\n\n\nMACARTHUR, THOMAS\n24F\nTRUE\n2312\n\n\nMACARTHUR, THOMAS\n24K\nTRUE\n844833\n\n\nMACARTHUR, THOMAS\n24Z\nTRUE\n745\n\n\nNORCROSS, DONALD W\n24E\nTRUE\n216542\n\n\nNORCROSS, DONALD W\n24K\nTRUE\n857546\n\n\nNORCROSS, DONALD W\n24Z\nTRUE\n2513\n\n\nPALLONE, FRANK JR\n24E\nTRUE\n20\n\n\nPALLONE, FRANK JR\n24K\nTRUE\n1590863\n\n\nPALLONE, FRANK JR\n24Z\nTRUE\n1420\n\n\nPASCRELL, WILLIAM J. HON.\n24E\nTRUE\n10\n\n\nPASCRELL, WILLIAM J. HON.\n24K\nTRUE\n918850\n\n\nPATTERSON, ROBERT W.\n24K\nFALSE\n5000\n\n\nPAYNE, DONALD M., JR.\n24E\nTRUE\n20\n\n\nPAYNE, DONALD M., JR.\n24K\nTRUE\n345450\n\n\nSIRES, ALBIO\n24E\nTRUE\n10\n\n\nSIRES, ALBIO\n24K\nTRUE\n353850\n\n\nSMITH, CHRISTOPHER H\n24E\nTRUE\n9508\n\n\nSMITH, CHRISTOPHER H\n24K\nTRUE\n249287\n\n\nSMITH, CHRISTOPHER H\n24Z\nTRUE\n5000\n\n\nSONNEK-SCHMELZ, BRENT J\n24K\nFALSE\n2100\n\n\n\nSource:  Federal Election Commission\n\n\n\n\n\nNote: a Transaction types include various contributions made to or against candidates. Descriptions can be found on FEC: https://www.fec.gov/campaign-finance-data/transaction-type-code-descriptions/"
   },
   {
     "objectID": "projects/project-2-fec-sabzara-alex/standards.html",
@@ -532,333 +336,11 @@
     "text": "What will you do if you discover that a team member’s work violates the Academic Code of Conduct?\nFILL ME"
   },
   {
-    "objectID": "projects/project-1-sabzara-alex/standards.html",
-    "href": "projects/project-1-sabzara-alex/standards.html",
-    "title": "SDS 192 Mini-Project 1 Standards",
-    "section": "",
-    "text": "Understanding Datasets\nWe started by reading the Data Dictionary carefully. We used variables from the data dictionary to create a new “STEM_Business” variable, representing the percentage of degrees offered in STEM and business. A bar graph was generated, with the x-axis limited to selected institutions using scale_x_discrete. We ensured consistency by selecting schools of similar size as count_wne_inc3_10 gave us number of students earning in high-income brackets. Labels were clarified by mutating “University of Massachusetts-Boston” to “UMASS Boston” and applying coord_flip for readability. Finally, we used geom_bar for creating bar graph and geom_point for scatter plots\n\n\nVisualization Aesthetics\nAdjusting the graphs to present better visually demonstrate our fluency of visualization aesthetics. For example, for the bar plot we used colors that clearly displayed the variation in earnings, and we used varying colors between the trend-line and the scatter plot to clearly display the trend. We also used concise names for the graphs, and make sure to include subtitles and captions to space out information clearly.\n\n\nPlotting Frequencies and Distributions\nPlotting the distributions along the scatter plot and determining which data to use demonstrated our knowledge and plotting frequencies and distributions. For example, when debating just plotting the schools we used in our bar plot or a larger range, we decided that using all MA institutions with provided data would show a more realistic distribution of data compared to a handpicked group of institutions."
-  },
-  {
-    "objectID": "projects/project-1-sabzara-alex/contributions.html",
-    "href": "projects/project-1-sabzara-alex/contributions.html",
-    "title": "SDS 192 Mini-Project 1 Contributions",
-    "section": "",
-    "text": "Group Member 1 Sabzara\nWe went thrugh the data dictionary and technical guide. I made the Stem_business variable using different variables. I also created the PLOT 1 which is Bar Graph. I also contributed to Blog post by working on introduction , analysis and Limitations.\n\n\nAlex\nI sorted through data, eventually finding the variables for and making the scatter plot. I also contributed to the blog post by editing it for revisions and contributing to the introduction and analysis of the scatter plot.\n\n\nGroup Member 3\nFill response here…"
-  },
-  {
-    "objectID": "projects/project-3-mapping-sabzara-tabitha/data_for_mapping.html",
-    "href": "projects/project-3-mapping-sabzara-tabitha/data_for_mapping.html",
-    "title": "Ideas for Mapping Data",
-    "section": "",
-    "text": "There is a lot of data in the world, pick a set that you are comfortable with by the end of the first project day. You can go down a rabbit hole after the semester is over."
-  },
-  {
-    "objectID": "projects/project-3-mapping-sabzara-tabitha/data_for_mapping.html#caution",
-    "href": "projects/project-3-mapping-sabzara-tabitha/data_for_mapping.html#caution",
-    "title": "Ideas for Mapping Data",
-    "section": "",
-    "text": "There is a lot of data in the world, pick a set that you are comfortable with by the end of the first project day. You can go down a rabbit hole after the semester is over."
-  },
-  {
-    "objectID": "projects/project-3-mapping-sabzara-tabitha/data_for_mapping.html#map-data-ideas-for-project-3",
-    "href": "projects/project-3-mapping-sabzara-tabitha/data_for_mapping.html#map-data-ideas-for-project-3",
-    "title": "Ideas for Mapping Data",
-    "section": "Map data ideas for project 3",
-    "text": "Map data ideas for project 3\n\nEPA Toxic Release Inventory (TRI)\nhttps://www.epa.gov/toxics-release-inventory-tri-program/tri-basic-data-files-calendar-years-1987-present\n\n\nCDC Flu View Interactive.\nhttps://gis.cdc.gov/grasp/fluview/fluportaldashboard.html\n\n\nMassachusetts GIS Data\nhttps://www.mass.gov/info-details/massgis-data-layers\nOther states also have GIS Data\n\n\nSearch Geo Spatial Analysis on Kaggle\nhttps://www.kaggle.com/datasets?sort=usability&tags=13206-Geospatial+Analysis\n(Sort by usability)"
-  },
-  {
-    "objectID": "projects/project-3-mapping-sabzara-tabitha/copy.html",
-    "href": "projects/project-3-mapping-sabzara-tabitha/copy.html",
-    "title": "SDS 192 Project 3",
-    "section": "",
-    "text": "Question: How does the distribution of Chipotle stores across the United States align with state populations? Additionally, when analyzing the proportion of stores relative to the total number of Chipotle locations and adjusting for population size, what insights can we uncover about factors influencing store placement, such as population density, urbanization, or regional economic activity\n\n# Include all libraries you may need for your project here. \n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.3     ✔ tidyr     1.3.1\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nlibrary(maps)\n\n\nAttaching package: 'maps'\n\nThe following object is masked from 'package:purrr':\n\n    map\n\nlibrary(ggplot2)\nlibrary(sf)\n\nLinking to GEOS 3.11.0, GDAL 3.5.3, PROJ 9.1.0; sf_use_s2() is TRUE\n\n\n\n# If you need to read in csv data do it here.\n\nchipotle_stores &lt;- read.csv(\"chipotle_stores.csv\")\n\nThis map displays the distribution of Chipotle stores across the United States\n\n# Group member 1 work here!\n# converting the chipotle data to shape file\nchipotle_sf &lt;- st_as_sf(chipotle_stores, \n                        coords = c(\"longitude\", \"latitude\"),\n                        crs = 4326)\n# creating the USA map\nUSA_map &lt;-  maps::map(\"state\", plot = FALSE, fill = TRUE)\nplot(USA_map)\n\n\n\n\n\n\n\n# Convert maps package map object to sf object using st_as_sf() again:\nUSA_sf &lt;- USA_map |&gt; \n  st_as_sf(coords = c(\"x\", \"y\"), crs = 4326)\n\n# Plot both layers:\nggplot() +\n  # Plot the USA map (USA_sf should already be an sf object)\n  geom_sf(data = USA_sf, fill = \"lightgray\", color = \"black\") +  \n  # Plot the Chipotle store locations on top of the USA map\n  geom_sf(data = chipotle_sf, aes(color = \"red\"), size = 2) +\n# remove axis ticks/label\n  theme(\n    axis.ticks.x = element_blank(),\n    axis.ticks.y = element_blank(),\n    axis.text.x = element_blank(),\n    axis.text.y = element_blank()\n  ) +\n  labs(\n    title = \"Chipotle Store Locations in the USA\",\n    color = \"Store Location\",\n    caption = \"Source: Chipotle store locations dataset from Kaggle\"\n  )\n\n\n\n\n\n\n\n\nIn this section, we aim to visualize the proportion of Chipotle stores in each state across the United States. To achieve this, we first create a population map to provide context and to ensure we don’t create the population map again.\nWe first create the population map of the United States.\n\n# Group member 2 work here!\n#Creating the population map\nUS_pop &lt;- \n  tidycensus::get_acs(\n    geography = \"state\",\n  variables = c(population = \"B01003_001\"),\n  geometry = TRUE\n  ) |&gt;\n  mutate(NAME = tolower(NAME))\n\nUS_pop|&gt;\n filter(NAME != \"alaska\")|&gt;\nggplot() +\n  geom_sf(aes(fill = estimate), color = \"white\", size = 0.2) +  \n  scale_fill_distiller(palette = \"YlOrRd\",\n                       direction = 1,\n                       name = \"Population\",\n                      labels = scales::comma\n                        ) +  \n  theme_minimal() +\n  labs(\n    title = \"Population by State in the United States\",\n    subtitle = \"Choropleth map of U.S. population\",\n    fill = \"Population\") +\n  theme(\n    axis.ticks.x = element_blank(),\n    axis.ticks.y = element_blank(),\n   # axis.text.x = element_blank(),\n    axis.text.y = element_blank()) +\n      \n    xlim(-130,-70)\n\n\n\n\n\n\n\n\nNext, we create a map displaying the proportion of Chipotle stores in each state relative to the total number of stores across the United States.\n\n# Creating showing the proportion of chipotle stores for each state\n\n#Custom function to calculate store proportions by state\n\ncalculate_proportion &lt;- function(df, total_stores) {\n  df |&gt;\n    group_by(state) |&gt;\n    summarise(\n      total_stores_per_state = n(),\n      proportion_each_state = (n() / total_stores) * 100\n    )\n}\n\n# Apply the custom function to calculate store proportions\ntotal_stores &lt;- nrow(chipotle_stores)  # Total number of stores in the dataset\nchipotle_stores_prop &lt;- calculate_proportion(chipotle_stores, total_stores)\n\n# Print the resulting data frame to check the results\nprint(chipotle_stores_prop)\n\n# A tibble: 48 × 3\n   state       total_stores_per_state proportion_each_state\n   &lt;chr&gt;                        &lt;int&gt;                 &lt;dbl&gt;\n 1 Alabama                         15                 0.571\n 2 Arizona                         85                 3.23 \n 3 Arkansas                         6                 0.228\n 4 California                     421                16.0  \n 5 Colorado                        79                 3.00 \n 6 Connecticut                     24                 0.913\n 7 Delaware                         9                 0.342\n 8 Florida                        177                 6.73 \n 9 Georgia                         61                 2.32 \n10 Idaho                            4                 0.152\n# ℹ 38 more rows\n\n# Load the USA map for plotting\nUSA_map &lt;- maps::map(\"state\", plot = FALSE, fill = TRUE)\n\n# States data to join with the chipotle data\nstates &lt;- as.data.frame(cbind(abrev = state.abb, lower_state = tolower(state.name), upper_state = state.name))\n\n# Join chipotle data with states to have lowercase state names for merging\nchipotle_stores_prop_lower &lt;- states |&gt;\n  inner_join(chipotle_stores_prop, by = c(\"upper_state\" = \"state\"))\n\n# Convert the map object to an sf object for plotting\nUSA_sf &lt;- USA_map |&gt;\n  st_as_sf(coords = c(\"x\", \"y\"), crs = 4326)\n\n# Join the map with chipotle store proportions\nUSA_map_joined &lt;- USA_sf |&gt;\n  left_join(chipotle_stores_prop_lower, by = c(\"ID\" = \"lower_state\")\n  )\n\ncreating the chloropleth map\n\n# Create choropleth map\nggplot() +\n  geom_sf(data = USA_map_joined, aes(fill = proportion_each_state)) + \n  scale_fill_distiller(palette = \"YlOrRd\", direction = 1, name = \"Proportion of Stores (%)\") +  \n  labs(\n    title = \"Proportion of Chipotle Stores by State in the United States\",\n    subtitle = \"Choropleth map showing the percentage of Chipotle stores per state relative to the total stores in US\",\n    caption = \"Data sourced from Chipotle store locations(kraggle) and U.S. Census population estimates.\") +\n  theme_minimal() +\n  theme(\n    panel.background = element_rect(fill = \"azure2\",\n                                    colour = \"black\",\n                                    size = 0.5),\n    panel.grid.major = element_blank(),\n    panel.grid.minor = element_blank(),\n    axis.ticks.x = element_blank(),\n    axis.ticks.y = element_blank(),\n    axis.text.x = element_blank(),\n    axis.text.y = element_blank()\n  ) \n\nWarning: The `size` argument of `element_rect()` is deprecated as of ggplot2 3.4.0.\nℹ Please use the `linewidth` argument instead.\n\n\n\n\n\n\n\n\n\nFrom the plot created, it is evident that the map closely resembles a population map, as it shows a similar distribution pattern across the states.\nTo create a map that accounts for population differences, we calculate the number of Chipotle stores per million residents in each state.\n\n# Calculate stores per million people for each state\nchipotle_stores_with_population &lt;- chipotle_stores_prop_lower |&gt;\n  inner_join(US_pop |&gt; select(NAME, estimate), by = c(\"lower_state\" = \"NAME\")) |&gt;\n  mutate(stores_per_million = (total_stores_per_state / estimate) * 1e6)\n# Merge population-adjusted data with USA map\nUSA_map_with_population &lt;- USA_sf |&gt;\n  left_join(chipotle_stores_with_population, by = c(\"ID\" = \"lower_state\"))\n# Create a map based on stores per million residents\nggplot() +\n  geom_sf(data = USA_map_with_population, aes(fill = stores_per_million)) +\n  scale_fill_distiller(palette = \"YlOrRd\", direction = 1, name = \"Stores per Million\") +\n  labs(\n    title = \"Chipotle Stores Adjusted for State Population\",\n    subtitle = \"Stores per Million Residents\",\n    caption = \"Data: Chipotle and US Census\"\n  ) +\n  theme_minimal() +\n  theme(\n    axis.ticks.x = element_blank(),\n    axis.ticks.y = element_blank(),\n    axis.text.x = element_blank(),\n    axis.text.y = element_blank(),\n    panel.background = element_rect(fill = \"lightblue\", color = \"black\"),\n    legend.position = \"bottom\"\n  )\n\n\n\n\n\n\n\n\n\n# Group member 3 work here!\n\n\nBlog post\nIn this project, we explored the distribution of Chipotle restaurants across the United States using geospatial analysis. Leveraging a dataset from Kaggle, which provides the location of every Chipotle restaurant in the country, we sought to understand the company’s location strategy. The dataset was uploaded by Jeffrey Braun, a UChicago graduate, who claimed to have scraped the data from the Chipotle website. (Braun 2020). Specifically, we aimed to analyze how Chipotle store locations are distributed in relation to state populations and to investigate whether store concentration correlates with population density.\nWe began by visualizing the locations of Chipotle restaurants on a U.S. map. This involved converting the dataset into a spatial format, enabling us to plot the coordinates of each store. The visualization revealed that Chipotle locations are primarily concentrated in urban centers, with states like California, New York, and Texas hosting the most stores. These states, with their high population densities and large urban hubs like Los Angeles, New York City, and Houston, naturally align with a higher number of Chipotle locations. To assess how population influences store distribution, we created a population map of the United States. This step was crucial as it provided a baseline for comparing the distribution of Chipotle locations to population data. From there, we developed a custom function to calculate each state’s proportion of Chipotle stores relative to the national total. Using this data, we created a choropleth map that graphically represented the store proportions, offering a clear depiction of states with higher or lower concentrations of Chipotle locations. The resulting map closely mirrored the population map, suggesting that states with larger populations generally host more Chipotle stores. However, we wanted to investigate further to determine if less-populated states had a comparable number of stores per million residents to more populous states.\nWe then took our analysis a step further by considering population-adjusted metrics. Recognizing that absolute store counts alone do not account for state population differences, we integrated U.S. Census data to calculate the number of Chipotle stores per million residents in each state. This approach allowed us to explore whether smaller states with lower populations had comparable store density to larger, more populous states. Using this new proportion, we created another choropleth map to visualize the distribution of Chipotle stores on a per-capita basis, offering a more balanced view of store density relative to population size. The population-adjusted analysis highlights interesting patterns. States with, such as Minnesota, Ohio, and Pennsylvania, have a proportionally higher number of Chipotle stores per capita, even if their total store counts are relatively modest. On the other hand, some highly populated states have a relatively lower store density per capita, despite hosting a large number of locations overall. This suggests that Chipotle’s placement strategy is not solely driven by population size but also considers other factors such as high-traffic urban centers, economic activity, and potentially regional preferences.\nOur findings align with insights from Jordan Bean’s study, which highlights Chipotle’s strategic focus on urban centers in high-density areas while also noting a recent shift toward suburban areas (Bean 2023). This strategic adaptation may reflect evolving trends, such as population migration and hybrid work patterns, as Chipotle seeks to expand its reach into new markets.\nIn conclusion, this project highlights the value of integrating geospatial and demographic analysis to understand business strategies. By creating maps that account for both absolute store counts and population-adjusted metrics, we uncovered patterns that reveal the brand’s strategic focus on urban areas and densely populated states. These findings can help inform business decisions of Chipotle and other brands, from identifying growth opportunities to refining location strategies. Lastly, this project highlights how geospatial tools and demographic data in R can be applied to real-world problems, offering practical insights for optimizing retail operations and enhancing strategic planning.\n\n\n\n\n\nReferences\n\nBean, Jordan. 2023. “Beyond the Burrito: The Analytics Behind Chipotle’s Location Strategy.” Medium, May. https://jordanbean.medium.com/the-analytics-behind-chipotles-location-strategy-2d91a23fd66.\n\n\nBraun, Jeffrey. 2020. “Chipotle Locations: A CSV File for All Chipotle Locations in the US.” https://www.kaggle.com/jeffreybraun/chipotle-locations."
-  },
-  {
-    "objectID": "projects/project-3-mapping-sabzara-tabitha/group-contract.html",
-    "href": "projects/project-3-mapping-sabzara-tabitha/group-contract.html",
-    "title": "SDS 192 Group Contract",
-    "section": "",
-    "text": "Working in groups can be both incredibly rewarding and incredibly challenging. The most effective collaborations explicitly outline group roles, expectations, and procedures in advance to coordinate how the group will operate, to establish mechanisms of accountability, and to mitigate the risk of conflict. It is important that, throughout the semester, you address group concerns as they come up. This may involve assigning someone to check in with team members that are falling behind, establishing expectations for attending office hours and asking for help, calling team meetings to discuss issues, or reaching out to the instructor to resolve enduring and unresolved conflicts."
-  },
-  {
-    "objectID": "projects/project-3-mapping-sabzara-tabitha/group-contract.html#who-will-be-responsible-for-scheduling-meetings-and-hosting-zoom-calls",
-    "href": "projects/project-3-mapping-sabzara-tabitha/group-contract.html#who-will-be-responsible-for-scheduling-meetings-and-hosting-zoom-calls",
-    "title": "SDS 192 Group Contract",
-    "section": "Who will be responsible for scheduling meetings and hosting Zoom calls?",
-    "text": "Who will be responsible for scheduling meetings and hosting Zoom calls?\nTabitha"
-  },
-  {
-    "objectID": "projects/project-3-mapping-sabzara-tabitha/group-contract.html#who-will-be-responsible-for-facilitating-discussion-during-team-meetings",
-    "href": "projects/project-3-mapping-sabzara-tabitha/group-contract.html#who-will-be-responsible-for-facilitating-discussion-during-team-meetings",
-    "title": "SDS 192 Group Contract",
-    "section": "Who will be responsible for facilitating discussion during team meetings?",
-    "text": "Who will be responsible for facilitating discussion during team meetings?\nSabzara"
-  },
-  {
-    "objectID": "projects/project-3-mapping-sabzara-tabitha/group-contract.html#who-will-be-responsible-for-taking-notes-and-recording-decisions-during-meetings",
-    "href": "projects/project-3-mapping-sabzara-tabitha/group-contract.html#who-will-be-responsible-for-taking-notes-and-recording-decisions-during-meetings",
-    "title": "SDS 192 Group Contract",
-    "section": "Who will be responsible for taking notes and recording decisions during meetings?",
-    "text": "Who will be responsible for taking notes and recording decisions during meetings?\nTabitha"
-  },
-  {
-    "objectID": "projects/project-3-mapping-sabzara-tabitha/group-contract.html#who-will-be-responsible-for-emailing-the-professor-with-questions",
-    "href": "projects/project-3-mapping-sabzara-tabitha/group-contract.html#who-will-be-responsible-for-emailing-the-professor-with-questions",
-    "title": "SDS 192 Group Contract",
-    "section": "Who will be responsible for emailing the professor with questions?",
-    "text": "Who will be responsible for emailing the professor with questions?\nSabzara"
-  },
-  {
-    "objectID": "projects/project-3-mapping-sabzara-tabitha/group-contract.html#who-will-be-responsible-for-requesting-group-assignment-extensions",
-    "href": "projects/project-3-mapping-sabzara-tabitha/group-contract.html#who-will-be-responsible-for-requesting-group-assignment-extensions",
-    "title": "SDS 192 Group Contract",
-    "section": "Who will be responsible for requesting group assignment extensions?",
-    "text": "Who will be responsible for requesting group assignment extensions?\nTabitha"
-  },
-  {
-    "objectID": "projects/project-3-mapping-sabzara-tabitha/group-contract.html#who-will-be-responsible-for-setting-deadlines-for-drafts",
-    "href": "projects/project-3-mapping-sabzara-tabitha/group-contract.html#who-will-be-responsible-for-setting-deadlines-for-drafts",
-    "title": "SDS 192 Group Contract",
-    "section": "Who will be responsible for setting deadlines for drafts?",
-    "text": "Who will be responsible for setting deadlines for drafts?\nSabzara"
-  },
-  {
-    "objectID": "projects/project-3-mapping-sabzara-tabitha/group-contract.html#who-will-be-responsible-for-checking-in-with-team-members-when-drafts-are-late",
-    "href": "projects/project-3-mapping-sabzara-tabitha/group-contract.html#who-will-be-responsible-for-checking-in-with-team-members-when-drafts-are-late",
-    "title": "SDS 192 Group Contract",
-    "section": "Who will be responsible for checking in with team members when drafts are late?",
-    "text": "Who will be responsible for checking in with team members when drafts are late?\nTabitha"
-  },
-  {
-    "objectID": "projects/project-3-mapping-sabzara-tabitha/group-contract.html#who-will-be-responsible-for-reviewing-all-materials-before-submission",
-    "href": "projects/project-3-mapping-sabzara-tabitha/group-contract.html#who-will-be-responsible-for-reviewing-all-materials-before-submission",
-    "title": "SDS 192 Group Contract",
-    "section": "Who will be responsible for reviewing all materials before submission?",
-    "text": "Who will be responsible for reviewing all materials before submission?\nSabzara"
-  },
-  {
-    "objectID": "projects/project-3-mapping-sabzara-tabitha/group-contract.html#who-will-be-responsible-for-submitting-assignments",
-    "href": "projects/project-3-mapping-sabzara-tabitha/group-contract.html#who-will-be-responsible-for-submitting-assignments",
-    "title": "SDS 192 Group Contract",
-    "section": "Who will be responsible for submitting assignments?",
-    "text": "Who will be responsible for submitting assignments?\nTabitha"
-  },
-  {
-    "objectID": "projects/project-3-mapping-sabzara-tabitha/group-contract.html#where-will-the-team-keep-meeting-notes",
-    "href": "projects/project-3-mapping-sabzara-tabitha/group-contract.html#where-will-the-team-keep-meeting-notes",
-    "title": "SDS 192 Group Contract",
-    "section": "Where will the team keep meeting notes?",
-    "text": "Where will the team keep meeting notes?\nIn a google docs."
-  },
-  {
-    "objectID": "projects/project-3-mapping-sabzara-tabitha/group-contract.html#where-will-the-team-store-drafts-of-assignments",
-    "href": "projects/project-3-mapping-sabzara-tabitha/group-contract.html#where-will-the-team-store-drafts-of-assignments",
-    "title": "SDS 192 Group Contract",
-    "section": "Where will the team store drafts of assignments?",
-    "text": "Where will the team store drafts of assignments?\nIn your branch on R."
-  },
-  {
-    "objectID": "projects/project-3-mapping-sabzara-tabitha/group-contract.html#through-what-channels-will-the-team-communicate-when-not-meeting",
-    "href": "projects/project-3-mapping-sabzara-tabitha/group-contract.html#through-what-channels-will-the-team-communicate-when-not-meeting",
-    "title": "SDS 192 Group Contract",
-    "section": "Through what channels will the team communicate when not meeting?",
-    "text": "Through what channels will the team communicate when not meeting?\nSlack"
-  },
-  {
-    "objectID": "projects/project-3-mapping-sabzara-tabitha/group-contract.html#what-is-the-expected-response-time-for-emails-and-messages",
-    "href": "projects/project-3-mapping-sabzara-tabitha/group-contract.html#what-is-the-expected-response-time-for-emails-and-messages",
-    "title": "SDS 192 Group Contract",
-    "section": "What is the expected response time for emails and messages?",
-    "text": "What is the expected response time for emails and messages?\n1 day"
-  },
-  {
-    "objectID": "projects/project-3-mapping-sabzara-tabitha/group-contract.html#how-often-will-the-team-meet",
-    "href": "projects/project-3-mapping-sabzara-tabitha/group-contract.html#how-often-will-the-team-meet",
-    "title": "SDS 192 Group Contract",
-    "section": "How often will the team meet?",
-    "text": "How often will the team meet?\nTwice a week"
-  },
-  {
-    "objectID": "projects/project-3-mapping-sabzara-tabitha/group-contract.html#what-daystimes-will-the-team-meet",
-    "href": "projects/project-3-mapping-sabzara-tabitha/group-contract.html#what-daystimes-will-the-team-meet",
-    "title": "SDS 192 Group Contract",
-    "section": "What days/times will the team meet?",
-    "text": "What days/times will the team meet?\nDuring project days"
-  },
-  {
-    "objectID": "projects/project-3-mapping-sabzara-tabitha/group-contract.html#how-long-will-meetings-be",
-    "href": "projects/project-3-mapping-sabzara-tabitha/group-contract.html#how-long-will-meetings-be",
-    "title": "SDS 192 Group Contract",
-    "section": "How long will meetings be?",
-    "text": "How long will meetings be?\n2 hours"
-  },
-  {
-    "objectID": "projects/project-3-mapping-sabzara-tabitha/group-contract.html#how-will-you-make-decisions-during-meetings-e.g.-consensus-a-vote",
-    "href": "projects/project-3-mapping-sabzara-tabitha/group-contract.html#how-will-you-make-decisions-during-meetings-e.g.-consensus-a-vote",
-    "title": "SDS 192 Group Contract",
-    "section": "How will you make decisions during meetings (e.g. consensus, a vote)?",
-    "text": "How will you make decisions during meetings (e.g. consensus, a vote)?\nDiscussing"
-  },
-  {
-    "objectID": "projects/project-3-mapping-sabzara-tabitha/group-contract.html#what-strategies-will-you-use-to-stay-on-task-during-meetings",
-    "href": "projects/project-3-mapping-sabzara-tabitha/group-contract.html#what-strategies-will-you-use-to-stay-on-task-during-meetings",
-    "title": "SDS 192 Group Contract",
-    "section": "What strategies will you use to stay on task during meetings?",
-    "text": "What strategies will you use to stay on task during meetings?\nHave a clear target of what needs to be done"
-  },
-  {
-    "objectID": "projects/project-3-mapping-sabzara-tabitha/group-contract.html#how-should-team-members-inform-each-other-if-they-are-going-to-be-late-to-a-meeting",
-    "href": "projects/project-3-mapping-sabzara-tabitha/group-contract.html#how-should-team-members-inform-each-other-if-they-are-going-to-be-late-to-a-meeting",
-    "title": "SDS 192 Group Contract",
-    "section": "How should team members inform each other if they are going to be late to a meeting?",
-    "text": "How should team members inform each other if they are going to be late to a meeting?\nSlack"
-  },
-  {
-    "objectID": "projects/project-3-mapping-sabzara-tabitha/group-contract.html#when-is-it-ok-for-a-team-member-to-skip-a-meeting-how-soon-should-they-inform-the-group",
-    "href": "projects/project-3-mapping-sabzara-tabitha/group-contract.html#when-is-it-ok-for-a-team-member-to-skip-a-meeting-how-soon-should-they-inform-the-group",
-    "title": "SDS 192 Group Contract",
-    "section": "When is it ok for a team member to skip a meeting? How soon should they inform the group?",
-    "text": "When is it ok for a team member to skip a meeting? How soon should they inform the group?\nIf they have an emergency"
-  },
-  {
-    "objectID": "projects/project-3-mapping-sabzara-tabitha/group-contract.html#what-will-you-do-if-a-group-member-is-chronically-absent-from-or-late-to-meetings",
-    "href": "projects/project-3-mapping-sabzara-tabitha/group-contract.html#what-will-you-do-if-a-group-member-is-chronically-absent-from-or-late-to-meetings",
-    "title": "SDS 192 Group Contract",
-    "section": "What will you do if a group member is chronically absent from or late to meetings?",
-    "text": "What will you do if a group member is chronically absent from or late to meetings?\nI will write them an email."
-  },
-  {
-    "objectID": "projects/project-3-mapping-sabzara-tabitha/group-contract.html#what-will-you-do-if-a-group-member-is-consistently-not-participating-in-meetings",
-    "href": "projects/project-3-mapping-sabzara-tabitha/group-contract.html#what-will-you-do-if-a-group-member-is-consistently-not-participating-in-meetings",
-    "title": "SDS 192 Group Contract",
-    "section": "What will you do if a group member is consistently not participating in meetings?",
-    "text": "What will you do if a group member is consistently not participating in meetings?\nI’ll talk to them about it."
-  },
-  {
-    "objectID": "projects/project-3-mapping-sabzara-tabitha/group-contract.html#what-are-your-expectations-for-respectful-engagement-and-communication-during-meetings-and-in-collaborative-workspaces-what-will-you-do-if-a-member-of-your-team-does-not-meet-these-expectations",
-    "href": "projects/project-3-mapping-sabzara-tabitha/group-contract.html#what-are-your-expectations-for-respectful-engagement-and-communication-during-meetings-and-in-collaborative-workspaces-what-will-you-do-if-a-member-of-your-team-does-not-meet-these-expectations",
-    "title": "SDS 192 Group Contract",
-    "section": "What are your expectations for respectful engagement and communication during meetings and in collaborative workspaces? What will you do if a member of your team does not meet these expectations?",
-    "text": "What are your expectations for respectful engagement and communication during meetings and in collaborative workspaces? What will you do if a member of your team does not meet these expectations?\nHave clear communication"
-  },
-  {
-    "objectID": "projects/project-3-mapping-sabzara-tabitha/group-contract.html#how-will-you-ensure-that-all-team-members-fully-understand-assignment-expectations-what-will-you-do-if-your-team-is-unsure-how-to-complete-an-assignment",
-    "href": "projects/project-3-mapping-sabzara-tabitha/group-contract.html#how-will-you-ensure-that-all-team-members-fully-understand-assignment-expectations-what-will-you-do-if-your-team-is-unsure-how-to-complete-an-assignment",
-    "title": "SDS 192 Group Contract",
-    "section": "How will you ensure that all team members fully understand assignment expectations? What will you do if your team is unsure how to complete an assignment?",
-    "text": "How will you ensure that all team members fully understand assignment expectations? What will you do if your team is unsure how to complete an assignment?\nDiscuss the assignment before doing it."
-  },
-  {
-    "objectID": "projects/project-3-mapping-sabzara-tabitha/group-contract.html#how-will-you-ensure-that-all-team-members-are-contributing-equitably-to-assignments",
-    "href": "projects/project-3-mapping-sabzara-tabitha/group-contract.html#how-will-you-ensure-that-all-team-members-are-contributing-equitably-to-assignments",
-    "title": "SDS 192 Group Contract",
-    "section": "How will you ensure that all team members are contributing equitably to assignments?",
-    "text": "How will you ensure that all team members are contributing equitably to assignments?\nAssign specific tasks to each member"
-  },
-  {
-    "objectID": "projects/project-3-mapping-sabzara-tabitha/group-contract.html#how-soon-in-advance-of-deadlines-do-you-expect-all-team-members-to-share-drafts-of-their-work",
-    "href": "projects/project-3-mapping-sabzara-tabitha/group-contract.html#how-soon-in-advance-of-deadlines-do-you-expect-all-team-members-to-share-drafts-of-their-work",
-    "title": "SDS 192 Group Contract",
-    "section": "How soon in advance of deadlines do you expect all team members to share drafts of their work?",
-    "text": "How soon in advance of deadlines do you expect all team members to share drafts of their work?\nAs soon as they are done"
-  },
-  {
-    "objectID": "projects/project-3-mapping-sabzara-tabitha/group-contract.html#what-will-be-your-process-for-reviewing-each-others-work-before-submission",
-    "href": "projects/project-3-mapping-sabzara-tabitha/group-contract.html#what-will-be-your-process-for-reviewing-each-others-work-before-submission",
-    "title": "SDS 192 Group Contract",
-    "section": "What will be your process for reviewing each other’s work before submission?",
-    "text": "What will be your process for reviewing each other’s work before submission?\nDiscuss the work before submitting"
-  },
-  {
-    "objectID": "projects/project-3-mapping-sabzara-tabitha/group-contract.html#what-will-you-do-if-the-quality-of-a-team-members-work-does-not-meet-the-groups-expectations-when-is-it-permissible-to-revise-another-team-members-work",
-    "href": "projects/project-3-mapping-sabzara-tabitha/group-contract.html#what-will-you-do-if-the-quality-of-a-team-members-work-does-not-meet-the-groups-expectations-when-is-it-permissible-to-revise-another-team-members-work",
-    "title": "SDS 192 Group Contract",
-    "section": "What will you do if the quality of a team member’s work does not meet the group’s expectations? When is it permissible to revise another team member’s work?",
-    "text": "What will you do if the quality of a team member’s work does not meet the group’s expectations? When is it permissible to revise another team member’s work?\nReview it and work on the areas that need improving"
-  },
-  {
-    "objectID": "projects/project-3-mapping-sabzara-tabitha/group-contract.html#what-are-your-expectations-around-punctuality-regarding-group-deadlines-how-should-team-members-inform-each-other-if-they-need-an-extension",
-    "href": "projects/project-3-mapping-sabzara-tabitha/group-contract.html#what-are-your-expectations-around-punctuality-regarding-group-deadlines-how-should-team-members-inform-each-other-if-they-need-an-extension",
-    "title": "SDS 192 Group Contract",
-    "section": "What are your expectations around punctuality regarding group deadlines? How should team members inform each other if they need an extension?",
-    "text": "What are your expectations around punctuality regarding group deadlines? How should team members inform each other if they need an extension?\nTeam members should communicate early if they need extensions."
-  },
-  {
-    "objectID": "projects/project-3-mapping-sabzara-tabitha/group-contract.html#what-will-you-do-if-a-student-is-consistently-late-in-submitting-draft-work",
-    "href": "projects/project-3-mapping-sabzara-tabitha/group-contract.html#what-will-you-do-if-a-student-is-consistently-late-in-submitting-draft-work",
-    "title": "SDS 192 Group Contract",
-    "section": "What will you do if a student is consistently late in submitting draft work?",
-    "text": "What will you do if a student is consistently late in submitting draft work?\nTalk to them about it"
-  },
-  {
-    "objectID": "projects/project-3-mapping-sabzara-tabitha/group-contract.html#what-will-you-do-if-you-discover-that-a-team-members-work-violates-the-academic-code-of-conduct",
-    "href": "projects/project-3-mapping-sabzara-tabitha/group-contract.html#what-will-you-do-if-you-discover-that-a-team-members-work-violates-the-academic-code-of-conduct",
-    "title": "SDS 192 Group Contract",
-    "section": "What will you do if you discover that a team member’s work violates the Academic Code of Conduct?",
-    "text": "What will you do if you discover that a team member’s work violates the Academic Code of Conduct?\nTalk to them about it"
-  },
-  {
     "objectID": "projects/project-1-sabzara-alex/scorecard_analysis.html",
     "href": "projects/project-1-sabzara-alex/scorecard_analysis.html",
     "title": "Scorecard Analysis",
     "section": "",
     "text": "This analysis investigates the relationship between the percentage of degrees awarded in STEM and Business fields, institutional costs, and post-graduate income outcomes. It highlights disparities in access and earning potential tied to degree focus and affordability.\n\n\nThis plot shows the relationship between the percentage of total degrees awarded in STEM and Business fields at each institution and the number of students earning $75,000+ ten years after enrollment.\n\n\n\n\n\n\n\n\n\n\n\n\nThis plot explores how the percentage of total degrees awarded in STEM and Business fields relates to the cost of attending each institution.\n\n\n\n\n\n\n\n\n\n\n\n\nThe College Scorecard project was developed by the U.S. Department of Education, including insights into the cost, performance, and outcomes of colleges, allowing users to weigh trade-offs and make informed decisions based on their educational needs and goals. The data is derived from multiple sources, including institutional reports through the Integrated Postsecondary Education Data System (IPEDS). All the variables selected for the given visualizations come from IPEDS. IPEDS gathers information from every institution that participates in the federal student financial aid programs. For this project, we are working to explore the relationship between the percentage of business degrees offered, the cost of attending various schools, and the number of students in high-income brackets ten years after enrolling in school and not currently enrolled. Specifically, we sought to understand how financially affordable schools with a focus on STEM degrees are and whether attending these institutions increases the likelihood of graduates achieving higher income levels. For the bar graph, the percentage of STEM and business degrees offered by each institution were compared with that with the number of students who, 10 years after entry, are earning in the highest income bracket (≥ $75,001). For the scatter plot, the percentage of degrees awarded in STEM and business were compared with the cost to attend each institution. The range for degrees awarded is from 0% to 100%. The range for the cost to attend per academic year is from $0 per year to $80,000 per year.\nThe first bar plot analyzes the STEM_Business variable. A distinct trend emerges: institutions that award a higher percentage of degrees in STEM and business fields are associated with a greater number of students earning over $75,000 ten years after enrollment. Specifically, institutions with more than 40% of degrees in these disciplines report over 500 individuals in the high-income bracket, whereas those with lower percentages of STEM and business degrees have fewer than 300 high-income earners. This finding suggests graduates from STEM- and business-focused schools have better financial prospects, suggesting these paths boost long-term earning potential.\nThe scatter plot determines that the percentage of degrees awarded in STEM and business has a positive relationship with the cost to attend each institution. This is emphasized by the trendline. Schools with a heavy emphasis on the humanities, producing close to zero percentage of degrees awarded in STEM and business, cost a median of $17,000 per academic year. This is converse schools with a heavy emphasis on STEM and business, producing a close to 100% of degrees awarded in STEM and business cost a median of about $69,000 per year.\nThe above analysis indicates that low-income individuals have limited access to institutions offering STEM and business degrees, while students attending these schools tend to achieve higher income levels. The higher costs associated with STEM programs may exacerbate income inequality, making it difficult for lower-income students to pursue these fields and improve their financial prospects. This highlights a path for policymakers to address educational and economic inequity by improving access to STEM and business programs for low-income students However, ethical concerns must be acknowledged. We did not examine whether these institutions provide federal aid, which could impact access for low-income students. It is also possible that students from higher-income families attend these schools and achieve higher incomes because of their background. Their financial success may not solely be attributed to their STEM and business degrees. Our dataset focuses primarily on institutions with mid-high enrollment sizes in Massachusetts, particularly in the Boston region, which may not fully represent trends at smaller LACs. This analysis may unintentionally marginalize institutions offering strong employment prospects in non-STEM fields, potentially overlooking viable career paths for diverse student populations."
-  },
-  {
-    "objectID": "My map on sds.html",
-    "href": "My map on sds.html",
-    "title": "Map",
-    "section": "",
-    "text": "```{r}\n\n\n\n\n\n#install.packages(googlesheets4)\n\n\n\n\n\nlibrary(tidyverse)\n\n\n\n\n\nlibrary(maps)\n\n\n\n\n\nlibrary(googlesheets4)\n\n\n\n\n\nclass_info &lt;- read_sheet(“https://docs.google.com/spreadsheets/d/1XOAFQvBcFvhKwEl5xH6l3nRJK2Wk0hWZ18S9kAZclQ0/edit?usp=sharing”) |&gt; janitor::clean_names()\n\n\n!\n\n\n# selecting only the column we are interested in and making it into a vector. country_vector &lt;- as.vector( class_info |&gt; select(“country”))\n```"
-  },
-  {
-    "objectID": "about.html#about-sabzara-ali",
-    "href": "about.html#about-sabzara-ali",
-    "title": "Sabzara",
-    "section": "",
-    "text": "Sabzara Ali is a sophomore student at Smith College, majoring in Quantitative Economics and Mathematics. Currently, she works as the Calculus Training Group Leader and an Office Assistant at the student office. Sabzara is passionate about understanding how economics affects marginalization, and she enjoys using data to address economic inequalities. When not immersed in her studies, Sabzara enjoys exploring topics in economics and mathematics, and is dedicated to tutoring and mentoring students to help them succeed.\n\n\n\nSophomore in Quantitative Economics and Mathematics\nSmith College\nNorthampton, MA\nPrevious academic experience:\n\nBA in Economics (Planned graduation: 2026)\nUniversity of Texas at Austin\nAustin, Texas\nMA in Mathematics (2009)\nAppalachian State University\nBoone, NC\n\n\n\n\n\n\nCalculus Training Group Leader and Office Assistant\nSmith College, Northampton, MA\n2024–Present\nResearch Assistant\nSmith College\n2023–2024\n\nPlease feel free to reach out to Sabzara for any queries or assistance with her projects!"
-  },
-  {
-    "objectID": "index.html#projects",
-    "href": "index.html#projects",
-    "title": "Welcome to My Portfolio!",
-    "section": "Projects",
-    "text": "Projects\nExplore my data analysis and visualization projects from SDS192!\n\nScorecard Analysis\n\nThis project explores how the percentage of STEM and business degrees at colleges impacts long-term income and tuition costs. Findings show that while schools offering more of these degrees have higher tuition, graduates tend to earn significantly more. However, the affordability for low-income students remains a growing challenge. View Project\n\n\n\n\nFEC Analysis\n\nThis analysis dives into the relationship between campaign contributions and election outcomes in New Jersey’s 2016 U.S. House race. While winning candidates received higher contributions, especially from lobbyist committees, the data shows that multiple factors—such as committee type and political environment—play crucial roles in determining electoral success. View Project\n\n\n\n\nMapping Chipotle Stores\n\nHere, I analyzed the distribution of Chipotle restaurants across the U.S., correlating it with state populations. By adjusting for population density, I found that Chipotle strategically places its locations in high-density urban areas while balancing store density in smaller states. View Project"
-  },
-  {
-    "objectID": "about.html#bio",
-    "href": "about.html#bio",
-    "title": "Frank Hermosillo",
-    "section": "",
-    "text": "Frank Hermosillo studies neural networks and their applications at Google Brain. His research focuses on differentiable network pruning approximation and decentralized gradient inversion mechanics. He frequently collaborates with researchers who study machine learning, computer vision, and cognitive science. His work has been featured in WIRED, The Atlantic, Newsweek, and The New York Times Magazine."
-  },
-  {
-    "objectID": "projects/project-1-sabzara-alex/scorecard_analysis.html#cost-vs.-degree-focus-the-relationship-between-stembusiness-degrees-and-tuition",
-    "href": "projects/project-1-sabzara-alex/scorecard_analysis.html#cost-vs.-degree-focus-the-relationship-between-stembusiness-degrees-and-tuition",
-    "title": "SDS 192 Scorecard Analysis",
-    "section": "Cost vs. Degree Focus: The Relationship Between STEM/Business Degrees and Tuition",
-    "text": "Cost vs. Degree Focus: The Relationship Between STEM/Business Degrees and Tuition"
-  },
-  {
-    "objectID": "projects/project-1-sabzara-alex/scorecard_analysis.html#cost-vs.-degree-focus-the-relationship-between-stembusiness-degrees-and-cost-of-attendence",
-    "href": "projects/project-1-sabzara-alex/scorecard_analysis.html#cost-vs.-degree-focus-the-relationship-between-stembusiness-degrees-and-cost-of-attendence",
-    "title": "SDS 192 Scorecard Analysis",
-    "section": "Cost vs. Degree Focus: The Relationship Between STEM/Business Degrees and Cost of Attendence",
-    "text": "Cost vs. Degree Focus: The Relationship Between STEM/Business Degrees and Cost of Attendence"
-  },
-  {
-    "objectID": "projects/project-1-sabzara-alex/scorecard_analysis.html#stem-business-degrees-vs.-high-income-outcomes",
-    "href": "projects/project-1-sabzara-alex/scorecard_analysis.html#stem-business-degrees-vs.-high-income-outcomes",
-    "title": "Scorecard Analysis",
-    "section": "",
-    "text": "This plot shows the relationship between the percentage of total degrees awarded in STEM and Business fields at each institution and the number of students earning $75,000+ ten years after enrollment."
-  },
-  {
-    "objectID": "projects/project-1-sabzara-alex/scorecard_analysis.html#cost-vs.-degree-focus",
-    "href": "projects/project-1-sabzara-alex/scorecard_analysis.html#cost-vs.-degree-focus",
-    "title": "Scorecard Analysis",
-    "section": "",
-    "text": "This plot explores how the percentage of total degrees awarded in STEM and Business fields relates to the cost of attending each institution."
   },
   {
     "objectID": "projects/project-1-sabzara-alex/scorecard_analysis.html#blog-post",
@@ -868,80 +350,248 @@
     "text": "The College Scorecard project was developed by the U.S. Department of Education, including insights into the cost, performance, and outcomes of colleges, allowing users to weigh trade-offs and make informed decisions based on their educational needs and goals. The data is derived from multiple sources, including institutional reports through the Integrated Postsecondary Education Data System (IPEDS). All the variables selected for the given visualizations come from IPEDS. IPEDS gathers information from every institution that participates in the federal student financial aid programs. For this project, we are working to explore the relationship between the percentage of business degrees offered, the cost of attending various schools, and the number of students in high-income brackets ten years after enrolling in school and not currently enrolled. Specifically, we sought to understand how financially affordable schools with a focus on STEM degrees are and whether attending these institutions increases the likelihood of graduates achieving higher income levels. For the bar graph, the percentage of STEM and business degrees offered by each institution were compared with that with the number of students who, 10 years after entry, are earning in the highest income bracket (≥ $75,001). For the scatter plot, the percentage of degrees awarded in STEM and business were compared with the cost to attend each institution. The range for degrees awarded is from 0% to 100%. The range for the cost to attend per academic year is from $0 per year to $80,000 per year.\nThe first bar plot analyzes the STEM_Business variable. A distinct trend emerges: institutions that award a higher percentage of degrees in STEM and business fields are associated with a greater number of students earning over $75,000 ten years after enrollment. Specifically, institutions with more than 40% of degrees in these disciplines report over 500 individuals in the high-income bracket, whereas those with lower percentages of STEM and business degrees have fewer than 300 high-income earners. This finding suggests graduates from STEM- and business-focused schools have better financial prospects, suggesting these paths boost long-term earning potential.\nThe scatter plot determines that the percentage of degrees awarded in STEM and business has a positive relationship with the cost to attend each institution. This is emphasized by the trendline. Schools with a heavy emphasis on the humanities, producing close to zero percentage of degrees awarded in STEM and business, cost a median of $17,000 per academic year. This is converse schools with a heavy emphasis on STEM and business, producing a close to 100% of degrees awarded in STEM and business cost a median of about $69,000 per year.\nThe above analysis indicates that low-income individuals have limited access to institutions offering STEM and business degrees, while students attending these schools tend to achieve higher income levels. The higher costs associated with STEM programs may exacerbate income inequality, making it difficult for lower-income students to pursue these fields and improve their financial prospects. This highlights a path for policymakers to address educational and economic inequity by improving access to STEM and business programs for low-income students However, ethical concerns must be acknowledged. We did not examine whether these institutions provide federal aid, which could impact access for low-income students. It is also possible that students from higher-income families attend these schools and achieve higher incomes because of their background. Their financial success may not solely be attributed to their STEM and business degrees. Our dataset focuses primarily on institutions with mid-high enrollment sizes in Massachusetts, particularly in the Boston region, which may not fully represent trends at smaller LACs. This analysis may unintentionally marginalize institutions offering strong employment prospects in non-STEM fields, potentially overlooking viable career paths for diverse student populations."
   },
   {
-    "objectID": "projects/project-2-fec-sabzara-alex/fec-analysis.html#total-contributions-to-winning-and-losing-candidates-by-committee-designation",
-    "href": "projects/project-2-fec-sabzara-alex/fec-analysis.html#total-contributions-to-winning-and-losing-candidates-by-committee-designation",
-    "title": "FEC Analysis",
+    "objectID": "projects/project-1-sabzara-alex/blog post.html",
+    "href": "projects/project-1-sabzara-alex/blog post.html",
+    "title": "blog post",
     "section": "",
-    "text": "This plot visualizes the total contributions made to candidates grouped by the winning status (won or lost) and committee designation.\n\n\n\nTotal Contributions by Winning Status\n\n\nwon\ntotal_contribution_amt\n\n\n\n\nFALSE\n5406606\n\n\nTRUE\n11460967\n\n\n\nSource:  Federal Election Commission"
+    "text": "The College Scorecard project was developed by the U.S. Department of Education, including insights into the cost, performance, and outcomes of colleges, allowing users to weigh trade-offs and make informed decisions based on their educational needs and goals. The data is derived from multiple sources, including institutional reports through the Integrated Postsecondary Education Data System (IPEDS). All the variables selected for the given visualizations come from IPEDS. IPEDS gathers information from every institution that participates in the federal student financial aid programs. For this project, we are working to explore the relationship between the percentage of business degrees offered, the cost of attending various schools, and the number of students in high-income brackets ten years after enrolling in school and not currently enrolled. Specifically, we sought to understand how financially affordable schools with a focus on STEM degrees are and whether attending these institutions increases the likelihood of graduates achieving higher income levels. For the bar graph, the percentage of STEM and business degrees offered by each institution were compared with that with the number of students who, 10 years after entry, are earning in the highest income bracket (≥ $75,001). For the scatter plot, the percentage of degrees awarded in STEM and business were compared with the cost to attend each institution. The range for degrees awarded is from 0% to 100%. The range for the cost to attend per academic year is from $0 per year to $80,000 per year. The first bar plot analyzes the STEM_Business variable. A distinct trend emerges: institutions that award a higher percentage of degrees in STEM and business fields are associated with a greater number of students earning over $75,000 ten years after enrollment. Specifically, institutions with more than 40% of degrees in these disciplines report over 500 individuals in the high-income bracket, whereas those with lower percentages of STEM and business degrees have fewer than 300 high-income earners. This finding suggests graduates from STEM- and business-focused schools have better financial prospects, suggesting these paths boost long-term earning potential.\nThe scatter plot determines that the percentage of degrees awarded in STEM and business has a positive relationship with the cost to attend each institution. This is emphasized by the trendline. Schools with a heavy emphasis on the humanities, producing close to zero percentage of degrees awarded in STEM and business, cost a median of $17,000 per academic year. This is converse schools with a heavy emphasis on STEM and business, producing a close to 100% of degrees awarded in STEM and business cost a median of about $69,000 per year.\nThe above analysis indicates that low-income individuals have limited access to institutions offering STEM and business degrees, while students attending these schools tend to achieve higher income levels. The higher costs associated with STEM programs may exacerbate income inequality, making it difficult for lower-income students to pursue these fields and improve their financial prospects. This highlights a path for policymakers to address educational and economic inequity by improving access to STEM and business programs for low-income students However, ethical concerns must be acknowledged. We did not examine whether these institutions provide federal aid, which could impact access for low-income students. It is also possible that students from higher-income families attend these schools and achieve higher incomes because of their background. Their financial success may not solely be attributed to their STEM and business degrees. Our dataset focuses primarily on institutions with mid-high enrollment sizes in Massachusetts, particularly in the Boston region, which may not fully represent trends at smaller LACs. This analysis may unintentionally marginalize institutions offering strong employment prospects in non-STEM fields, potentially overlooking viable career paths for diverse student populations."
   },
   {
-    "objectID": "projects/project-2-fec-sabzara-alex/fec-analysis.html#candidate-contributions-by-winning-status-and-associated-transaction-types",
-    "href": "projects/project-2-fec-sabzara-alex/fec-analysis.html#candidate-contributions-by-winning-status-and-associated-transaction-types",
-    "title": "FEC Analysis",
+    "objectID": "projects/project-1-sabzara-alex/group-contract.html",
+    "href": "projects/project-1-sabzara-alex/group-contract.html",
+    "title": "SDS 192 Group Contract",
     "section": "",
-    "text": "This table displays candidates, whether they won or lost, the types of transactions associated with their campaigns, and the total transaction amounts.\n\n\n\nCandidate Contributions by Winning Status and Transaction Types\n\n\ncand_name\ntransaction_tp\nwon\ntotal\n\n\n\n\nCOLE, DAVID HAGERTY\n24K\nFALSE\n1000\n\n\nCOLEMAN, BONNIE WATSON\n24E\nTRUE\n20\n\n\nCOLEMAN, BONNIE WATSON\n24K\nTRUE\n523035\n\n\nFRELINGHUYSEN, RODNEY P.\n24E\nTRUE\n48\n\n\nFRELINGHUYSEN, RODNEY P.\n24K\nTRUE\n915210\n\n\nFRELINGHUYSEN, RODNEY P.\n24Z\nTRUE\n7889\n\n\nGARRETT, SCOTT REP.\n24A\nFALSE\n4276731\n\n\nGARRETT, SCOTT REP.\n24C\nFALSE\n93710\n\n\nGARRETT, SCOTT REP.\n24E\nFALSE\n335388\n\n\nGARRETT, SCOTT REP.\n24F\nFALSE\n2350\n\n\nGARRETT, SCOTT REP.\n24K\nFALSE\n668881\n\n\nGARRETT, SCOTT REP.\n24Z\nFALSE\n5247\n\n\nGOTTHEIMER, JOSH\n24A\nTRUE\n30000\n\n\nGOTTHEIMER, JOSH\n24C\nTRUE\n96200\n\n\nGOTTHEIMER, JOSH\n24E\nTRUE\n1930852\n\n\nGOTTHEIMER, JOSH\n24F\nTRUE\n55514\n\n\nGOTTHEIMER, JOSH\n24K\nTRUE\n646002\n\n\nGOTTHEIMER, JOSH\n24Z\nTRUE\n2351\n\n\nJACOB, PETER MR.\n24K\nFALSE\n6348\n\n\nLANCE, LEONARD\n24E\nTRUE\n13400\n\n\nLANCE, LEONARD\n24F\nTRUE\n2158\n\n\nLANCE, LEONARD\n24K\nTRUE\n671912\n\n\nLANCE, LEONARD\n24Z\nTRUE\n1100\n\n\nLAW, ALEXANDER\n24E\nFALSE\n9821\n\n\nLOBIONDO, FRANK A.\n24E\nTRUE\n18069\n\n\nLOBIONDO, FRANK A.\n24K\nTRUE\n1144426\n\n\nLOBIONDO, FRANK A.\n24Z\nTRUE\n1557\n\n\nMACARTHUR, THOMAS\n24E\nTRUE\n2445\n\n\nMACARTHUR, THOMAS\n24F\nTRUE\n2312\n\n\nMACARTHUR, THOMAS\n24K\nTRUE\n844833\n\n\nMACARTHUR, THOMAS\n24Z\nTRUE\n745\n\n\nNORCROSS, DONALD W\n24E\nTRUE\n216542\n\n\nNORCROSS, DONALD W\n24K\nTRUE\n857546\n\n\nNORCROSS, DONALD W\n24Z\nTRUE\n2513\n\n\nPALLONE, FRANK JR\n24E\nTRUE\n20\n\n\nPALLONE, FRANK JR\n24K\nTRUE\n1590863\n\n\nPALLONE, FRANK JR\n24Z\nTRUE\n1420\n\n\nPASCRELL, WILLIAM J. HON.\n24E\nTRUE\n10\n\n\nPASCRELL, WILLIAM J. HON.\n24K\nTRUE\n918850\n\n\nPATTERSON, ROBERT W.\n24K\nFALSE\n5000\n\n\nPAYNE, DONALD M., JR.\n24E\nTRUE\n20\n\n\nPAYNE, DONALD M., JR.\n24K\nTRUE\n345450\n\n\nSIRES, ALBIO\n24E\nTRUE\n10\n\n\nSIRES, ALBIO\n24K\nTRUE\n353850\n\n\nSMITH, CHRISTOPHER H\n24E\nTRUE\n9508\n\n\nSMITH, CHRISTOPHER H\n24K\nTRUE\n249287\n\n\nSMITH, CHRISTOPHER H\n24Z\nTRUE\n5000\n\n\nSONNEK-SCHMELZ, BRENT J\n24K\nFALSE\n2100\n\n\n\nSource:  Federal Election Commission\n\n\n\n\n\nNote: a Transaction types include various contributions made to or against candidates. Descriptions can be found on FEC: https://www.fec.gov/campaign-finance-data/transaction-type-code-descriptions/"
+    "text": "Working in groups can be both incredibly rewarding and incredibly challenging. The most effective collaborations explicitly outline group roles, expectations, and procedures in advance to coordinate how the group will operate, to establish mechanisms of accountability, and to mitigate the risk of conflict. It is important that, throughout the semester, you address group concerns as they come up. This may involve assigning someone to check in with team members that are falling behind, establishing expectations for attending office hours and asking for help, calling team meetings to discuss issues, or reaching out to the instructor to resolve enduring and unresolved conflicts."
   },
   {
-    "objectID": "projects/project-3-mapping-sabzara-tabitha/mapping.html",
-    "href": "projects/project-3-mapping-sabzara-tabitha/mapping.html",
-    "title": "Mapping Chipotlle Stores",
+    "objectID": "projects/project-1-sabzara-alex/group-contract.html#who-will-be-responsible-for-scheduling-meetings-and-hosting-zoom-calls",
+    "href": "projects/project-1-sabzara-alex/group-contract.html#who-will-be-responsible-for-scheduling-meetings-and-hosting-zoom-calls",
+    "title": "SDS 192 Group Contract",
+    "section": "Who will be responsible for scheduling meetings and hosting Zoom calls?",
+    "text": "Who will be responsible for scheduling meetings and hosting Zoom calls?\nAlex"
+  },
+  {
+    "objectID": "projects/project-1-sabzara-alex/group-contract.html#who-will-be-responsible-for-facilitating-discussion-during-team-meetings",
+    "href": "projects/project-1-sabzara-alex/group-contract.html#who-will-be-responsible-for-facilitating-discussion-during-team-meetings",
+    "title": "SDS 192 Group Contract",
+    "section": "Who will be responsible for facilitating discussion during team meetings?",
+    "text": "Who will be responsible for facilitating discussion during team meetings?\nSabzara"
+  },
+  {
+    "objectID": "projects/project-1-sabzara-alex/group-contract.html#who-will-be-responsible-for-taking-notes-and-recording-decisions-during-meetings",
+    "href": "projects/project-1-sabzara-alex/group-contract.html#who-will-be-responsible-for-taking-notes-and-recording-decisions-during-meetings",
+    "title": "SDS 192 Group Contract",
+    "section": "Who will be responsible for taking notes and recording decisions during meetings?",
+    "text": "Who will be responsible for taking notes and recording decisions during meetings?\nAlex"
+  },
+  {
+    "objectID": "projects/project-1-sabzara-alex/group-contract.html#who-will-be-responsible-for-emailing-the-professor-with-questions",
+    "href": "projects/project-1-sabzara-alex/group-contract.html#who-will-be-responsible-for-emailing-the-professor-with-questions",
+    "title": "SDS 192 Group Contract",
+    "section": "Who will be responsible for emailing the professor with questions?",
+    "text": "Who will be responsible for emailing the professor with questions?\nAlex"
+  },
+  {
+    "objectID": "projects/project-1-sabzara-alex/group-contract.html#who-will-be-responsible-for-requesting-group-assignment-extensions",
+    "href": "projects/project-1-sabzara-alex/group-contract.html#who-will-be-responsible-for-requesting-group-assignment-extensions",
+    "title": "SDS 192 Group Contract",
+    "section": "Who will be responsible for requesting group assignment extensions?",
+    "text": "Who will be responsible for requesting group assignment extensions?\nSabzara"
+  },
+  {
+    "objectID": "projects/project-1-sabzara-alex/group-contract.html#who-will-be-responsible-for-setting-deadlines-for-drafts",
+    "href": "projects/project-1-sabzara-alex/group-contract.html#who-will-be-responsible-for-setting-deadlines-for-drafts",
+    "title": "SDS 192 Group Contract",
+    "section": "Who will be responsible for setting deadlines for drafts?",
+    "text": "Who will be responsible for setting deadlines for drafts?\nSabzara"
+  },
+  {
+    "objectID": "projects/project-1-sabzara-alex/group-contract.html#who-will-be-responsible-for-checking-in-with-team-members-when-drafts-are-late",
+    "href": "projects/project-1-sabzara-alex/group-contract.html#who-will-be-responsible-for-checking-in-with-team-members-when-drafts-are-late",
+    "title": "SDS 192 Group Contract",
+    "section": "Who will be responsible for checking in with team members when drafts are late?",
+    "text": "Who will be responsible for checking in with team members when drafts are late?\nAlex"
+  },
+  {
+    "objectID": "projects/project-1-sabzara-alex/group-contract.html#who-will-be-responsible-for-reviewing-all-materials-before-submission",
+    "href": "projects/project-1-sabzara-alex/group-contract.html#who-will-be-responsible-for-reviewing-all-materials-before-submission",
+    "title": "SDS 192 Group Contract",
+    "section": "Who will be responsible for reviewing all materials before submission?",
+    "text": "Who will be responsible for reviewing all materials before submission?"
+  },
+  {
+    "objectID": "projects/project-1-sabzara-alex/group-contract.html#who-will-be-responsible-for-submitting-assignments",
+    "href": "projects/project-1-sabzara-alex/group-contract.html#who-will-be-responsible-for-submitting-assignments",
+    "title": "SDS 192 Group Contract",
+    "section": "Who will be responsible for submitting assignments?",
+    "text": "Who will be responsible for submitting assignments?\nSabzara, Alex"
+  },
+  {
+    "objectID": "projects/project-1-sabzara-alex/group-contract.html#who-will-be-responsible-for-submitting-assignments-1",
+    "href": "projects/project-1-sabzara-alex/group-contract.html#who-will-be-responsible-for-submitting-assignments-1",
+    "title": "SDS 192 Group Contract",
+    "section": "Who will be responsible for submitting assignments?",
+    "text": "Who will be responsible for submitting assignments?\nSabzara"
+  },
+  {
+    "objectID": "projects/project-1-sabzara-alex/group-contract.html#where-will-the-team-keep-meeting-notes",
+    "href": "projects/project-1-sabzara-alex/group-contract.html#where-will-the-team-keep-meeting-notes",
+    "title": "SDS 192 Group Contract",
+    "section": "Where will the team keep meeting notes?",
+    "text": "Where will the team keep meeting notes?\nGoogle Drive"
+  },
+  {
+    "objectID": "projects/project-1-sabzara-alex/group-contract.html#where-will-the-team-store-drafts-of-assignments",
+    "href": "projects/project-1-sabzara-alex/group-contract.html#where-will-the-team-store-drafts-of-assignments",
+    "title": "SDS 192 Group Contract",
+    "section": "Where will the team store drafts of assignments?",
+    "text": "Where will the team store drafts of assignments?\nGoogle Drive"
+  },
+  {
+    "objectID": "projects/project-1-sabzara-alex/group-contract.html#through-what-channels-will-the-team-communicate-when-not-meeting",
+    "href": "projects/project-1-sabzara-alex/group-contract.html#through-what-channels-will-the-team-communicate-when-not-meeting",
+    "title": "SDS 192 Group Contract",
+    "section": "Through what channels will the team communicate when not meeting?",
+    "text": "Through what channels will the team communicate when not meeting?\nSlack"
+  },
+  {
+    "objectID": "projects/project-1-sabzara-alex/group-contract.html#what-is-the-expected-response-time-for-emails-and-messages",
+    "href": "projects/project-1-sabzara-alex/group-contract.html#what-is-the-expected-response-time-for-emails-and-messages",
+    "title": "SDS 192 Group Contract",
+    "section": "What is the expected response time for emails and messages?",
+    "text": "What is the expected response time for emails and messages?\n12 Hrs"
+  },
+  {
+    "objectID": "projects/project-1-sabzara-alex/group-contract.html#how-often-will-the-team-meet",
+    "href": "projects/project-1-sabzara-alex/group-contract.html#how-often-will-the-team-meet",
+    "title": "SDS 192 Group Contract",
+    "section": "How often will the team meet?",
+    "text": "How often will the team meet?\n3 times"
+  },
+  {
+    "objectID": "projects/project-1-sabzara-alex/group-contract.html#what-daystimes-will-the-team-meet",
+    "href": "projects/project-1-sabzara-alex/group-contract.html#what-daystimes-will-the-team-meet",
+    "title": "SDS 192 Group Contract",
+    "section": "What days/times will the team meet?",
+    "text": "What days/times will the team meet?\nThis weekend - TBD\nThursday - TBD\nFriday/Saturday - TBD"
+  },
+  {
+    "objectID": "projects/project-1-sabzara-alex/group-contract.html#how-long-will-meetings-be",
+    "href": "projects/project-1-sabzara-alex/group-contract.html#how-long-will-meetings-be",
+    "title": "SDS 192 Group Contract",
+    "section": "How long will meetings be?",
+    "text": "How long will meetings be?\nAround 1 hr"
+  },
+  {
+    "objectID": "projects/project-1-sabzara-alex/group-contract.html#how-will-you-make-decisions-during-meetings-e.g.-consensus-a-vote",
+    "href": "projects/project-1-sabzara-alex/group-contract.html#how-will-you-make-decisions-during-meetings-e.g.-consensus-a-vote",
+    "title": "SDS 192 Group Contract",
+    "section": "How will you make decisions during meetings (e.g. consensus, a vote)?",
+    "text": "How will you make decisions during meetings (e.g. consensus, a vote)?\nConsensus"
+  },
+  {
+    "objectID": "projects/project-1-sabzara-alex/group-contract.html#what-strategies-will-you-use-to-stay-on-task-during-meetings",
+    "href": "projects/project-1-sabzara-alex/group-contract.html#what-strategies-will-you-use-to-stay-on-task-during-meetings",
+    "title": "SDS 192 Group Contract",
+    "section": "What strategies will you use to stay on task during meetings?",
+    "text": "What strategies will you use to stay on task during meetings?\ngo through our task list."
+  },
+  {
+    "objectID": "projects/project-1-sabzara-alex/group-contract.html#how-should-team-members-inform-each-other-if-they-are-going-to-be-late-to-a-meeting",
+    "href": "projects/project-1-sabzara-alex/group-contract.html#how-should-team-members-inform-each-other-if-they-are-going-to-be-late-to-a-meeting",
+    "title": "SDS 192 Group Contract",
+    "section": "How should team members inform each other if they are going to be late to a meeting?",
+    "text": "How should team members inform each other if they are going to be late to a meeting?\nslack"
+  },
+  {
+    "objectID": "projects/project-1-sabzara-alex/group-contract.html#when-is-it-ok-for-a-team-member-to-skip-a-meeting-how-soon-should-they-inform-the-group",
+    "href": "projects/project-1-sabzara-alex/group-contract.html#when-is-it-ok-for-a-team-member-to-skip-a-meeting-how-soon-should-they-inform-the-group",
+    "title": "SDS 192 Group Contract",
+    "section": "When is it ok for a team member to skip a meeting? How soon should they inform the group?",
+    "text": "When is it ok for a team member to skip a meeting? How soon should they inform the group?\n2-3 hours"
+  },
+  {
+    "objectID": "projects/project-1-sabzara-alex/group-contract.html#what-will-you-do-if-a-group-member-is-chronically-absent-from-or-late-to-meetings",
+    "href": "projects/project-1-sabzara-alex/group-contract.html#what-will-you-do-if-a-group-member-is-chronically-absent-from-or-late-to-meetings",
+    "title": "SDS 192 Group Contract",
+    "section": "What will you do if a group member is chronically absent from or late to meetings?",
+    "text": "What will you do if a group member is chronically absent from or late to meetings?\ntalk let the professor know"
+  },
+  {
+    "objectID": "projects/project-1-sabzara-alex/group-contract.html#what-will-you-do-if-a-group-member-is-consistently-not-participating-in-meetings",
+    "href": "projects/project-1-sabzara-alex/group-contract.html#what-will-you-do-if-a-group-member-is-consistently-not-participating-in-meetings",
+    "title": "SDS 192 Group Contract",
+    "section": "What will you do if a group member is consistently not participating in meetings?",
+    "text": "What will you do if a group member is consistently not participating in meetings?\ntalk let the professor know"
+  },
+  {
+    "objectID": "projects/project-1-sabzara-alex/group-contract.html#what-are-your-expectations-for-respectful-engagement-and-communication-during-meetings-and-in-collaborative-workspaces-what-will-you-do-if-a-member-of-your-team-does-not-meet-these-expectations",
+    "href": "projects/project-1-sabzara-alex/group-contract.html#what-are-your-expectations-for-respectful-engagement-and-communication-during-meetings-and-in-collaborative-workspaces-what-will-you-do-if-a-member-of-your-team-does-not-meet-these-expectations",
+    "title": "SDS 192 Group Contract",
+    "section": "What are your expectations for respectful engagement and communication during meetings and in collaborative workspaces? What will you do if a member of your team does not meet these expectations?",
+    "text": "What are your expectations for respectful engagement and communication during meetings and in collaborative workspaces? What will you do if a member of your team does not meet these expectations?\nFILL ME"
+  },
+  {
+    "objectID": "projects/project-1-sabzara-alex/group-contract.html#how-will-you-ensure-that-all-team-members-fully-understand-assignment-expectations-what-will-you-do-if-your-team-is-unsure-how-to-complete-an-assignment",
+    "href": "projects/project-1-sabzara-alex/group-contract.html#how-will-you-ensure-that-all-team-members-fully-understand-assignment-expectations-what-will-you-do-if-your-team-is-unsure-how-to-complete-an-assignment",
+    "title": "SDS 192 Group Contract",
+    "section": "How will you ensure that all team members fully understand assignment expectations? What will you do if your team is unsure how to complete an assignment?",
+    "text": "How will you ensure that all team members fully understand assignment expectations? What will you do if your team is unsure how to complete an assignment?\nFILL ME"
+  },
+  {
+    "objectID": "projects/project-1-sabzara-alex/group-contract.html#how-will-you-ensure-that-all-team-members-are-contributing-equitably-to-assignments",
+    "href": "projects/project-1-sabzara-alex/group-contract.html#how-will-you-ensure-that-all-team-members-are-contributing-equitably-to-assignments",
+    "title": "SDS 192 Group Contract",
+    "section": "How will you ensure that all team members are contributing equitably to assignments?",
+    "text": "How will you ensure that all team members are contributing equitably to assignments?\nFILL ME"
+  },
+  {
+    "objectID": "projects/project-1-sabzara-alex/group-contract.html#how-soon-in-advance-of-deadlines-do-you-expect-all-team-members-to-share-drafts-of-their-work",
+    "href": "projects/project-1-sabzara-alex/group-contract.html#how-soon-in-advance-of-deadlines-do-you-expect-all-team-members-to-share-drafts-of-their-work",
+    "title": "SDS 192 Group Contract",
+    "section": "How soon in advance of deadlines do you expect all team members to share drafts of their work?",
+    "text": "How soon in advance of deadlines do you expect all team members to share drafts of their work?\nFILL ME"
+  },
+  {
+    "objectID": "projects/project-1-sabzara-alex/group-contract.html#what-will-be-your-process-for-reviewing-each-others-work-before-submission",
+    "href": "projects/project-1-sabzara-alex/group-contract.html#what-will-be-your-process-for-reviewing-each-others-work-before-submission",
+    "title": "SDS 192 Group Contract",
+    "section": "What will be your process for reviewing each other’s work before submission?",
+    "text": "What will be your process for reviewing each other’s work before submission?\nCheck each others work."
+  },
+  {
+    "objectID": "projects/project-1-sabzara-alex/group-contract.html#what-will-you-do-if-the-quality-of-a-team-members-work-does-not-meet-the-groups-expectations-when-is-it-permissible-to-revise-another-team-members-work",
+    "href": "projects/project-1-sabzara-alex/group-contract.html#what-will-you-do-if-the-quality-of-a-team-members-work-does-not-meet-the-groups-expectations-when-is-it-permissible-to-revise-another-team-members-work",
+    "title": "SDS 192 Group Contract",
+    "section": "What will you do if the quality of a team member’s work does not meet the group’s expectations? When is it permissible to revise another team member’s work?",
+    "text": "What will you do if the quality of a team member’s work does not meet the group’s expectations? When is it permissible to revise another team member’s work?\nAsk the team member"
+  },
+  {
+    "objectID": "projects/project-1-sabzara-alex/group-contract.html#what-are-your-expectations-around-punctuality-regarding-group-deadlines-how-should-team-members-inform-each-other-if-they-need-an-extension",
+    "href": "projects/project-1-sabzara-alex/group-contract.html#what-are-your-expectations-around-punctuality-regarding-group-deadlines-how-should-team-members-inform-each-other-if-they-need-an-extension",
+    "title": "SDS 192 Group Contract",
+    "section": "What are your expectations around punctuality regarding group deadlines? How should team members inform each other if they need an extension?",
+    "text": "What are your expectations around punctuality regarding group deadlines? How should team members inform each other if they need an extension?\nFILL ME"
+  },
+  {
+    "objectID": "projects/project-1-sabzara-alex/group-contract.html#what-will-you-do-if-a-student-is-consistently-late-in-submitting-draft-work",
+    "href": "projects/project-1-sabzara-alex/group-contract.html#what-will-you-do-if-a-student-is-consistently-late-in-submitting-draft-work",
+    "title": "SDS 192 Group Contract",
+    "section": "What will you do if a student is consistently late in submitting draft work?",
+    "text": "What will you do if a student is consistently late in submitting draft work?\ntalk to them and talk to professor"
+  },
+  {
+    "objectID": "projects/project-1-sabzara-alex/group-contract.html#what-will-you-do-if-you-discover-that-a-team-members-work-violates-the-academic-code-of-conduct",
+    "href": "projects/project-1-sabzara-alex/group-contract.html#what-will-you-do-if-you-discover-that-a-team-members-work-violates-the-academic-code-of-conduct",
+    "title": "SDS 192 Group Contract",
+    "section": "What will you do if you discover that a team member’s work violates the Academic Code of Conduct?",
+    "text": "What will you do if you discover that a team member’s work violates the Academic Code of Conduct?\nFILL ME"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Sabzara Ali",
     "section": "",
-    "text": "We are diving into Chipotle’s store distribution across the U.S., analyzing how its locations align with state populations and exploring factors that influence store placements, like population density, urbanization, and regional economic activity.\n\n\nThis map displays the distribution of Chipotle stores across the United States.\n\n\n\n\n\n\n\n\n\n\n\n\nIn this section, we aim to visualize the proportion of Chipotle stores in each state relative to the total number of stores nationwide. To provide context, we first reference a population map to guide our analysis and ensure we don’t unintentionally recreate the population map again.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe initial plot shows a distribution of Chipotle stores that closely mirrors the population distribution across states, indicating a correlation between store counts and population sizes. To gain deeper insights, we adjust the analysis by calculating the number of Chipotle stores per million residents in each state. By visualizing this proportion, we account for population differences, allowing us to see which states have more stores per million residents."
-  },
-  {
-    "objectID": "index.html#explore-my-data-projects",
-    "href": "index.html#explore-my-data-projects",
-    "title": "Welcome to My Portfolio!",
-    "section": "Explore My Data Projects",
-    "text": "Explore My Data Projects\nExplore my data analysis and visualization projects from SDS192!\n\nScorecard Analysis\n\nThis project explores how the percentage of STEM and business degrees at colleges impacts long-term income and tuition costs. Findings show that while schools offering more of these degrees have higher tuition, graduates tend to earn significantly more. However, the affordability for low-income students remains a growing challenge. View Project\n\n\n\n\nFEC Analysis\n\nThis analysis dives into the relationship between campaign contributions and election outcomes in New Jersey’s 2016 U.S. House race. While winning candidates received higher contributions, especially from lobbyist committees, the data shows that multiple factors—such as committee type and political environment—play crucial roles in determining electoral success. View Project\n\n\n\n\nMapping Chipotle Stores\n\nHere, I analyzed the distribution of Chipotle restaurants across the U.S., correlating it with state populations. By adjusting for population density, I found that Chipotle strategically places its locations in high-density urban areas while balancing store density in smaller states. View Project"
-  },
-  {
-    "objectID": "index.html#data-projects-portfolio",
-    "href": "index.html#data-projects-portfolio",
-    "title": "Welcome to My Portfolio!",
-    "section": "Data Projects Portfolio",
-    "text": "Data Projects Portfolio\nExplore my data analysis and visualization projects from SDS192!\n\nScorecard Analysis\n\nThis project explores how the percentage of STEM and business degrees at colleges impacts long-term income and tuition costs. Findings show that while schools offering more of these degrees have higher tuition, graduates tend to earn significantly more. However, the affordability for low-income students remains a growing challenge. View Project\n\n\n\n\nFEC Analysis\n\nThis analysis dives into the relationship between campaign contributions and election outcomes in New Jersey’s 2016 U.S. House race. While winning candidates received higher contributions, especially from lobbyist committees, the data shows that multiple factors—such as committee type and political environment—play crucial roles in determining electoral success. View Project\n\n\n\n\nMapping Chipotle Stores\n\nHere, I analyzed the distribution of Chipotle restaurants across the U.S., correlating it with state populations. By adjusting for population density, I found that Chipotle strategically places its locations in high-density urban areas while balancing store density in smaller states. View Project"
-  },
-  {
-    "objectID": "projects/project-3-mapping-sabzara-tabitha/mapping.html#exploring-chipotles-store-placement-strategy",
-    "href": "projects/project-3-mapping-sabzara-tabitha/mapping.html#exploring-chipotles-store-placement-strategy",
-    "title": "Mapping Chipotlle Stores",
-    "section": "",
-    "text": "We are diving into Chipotle’s store distribution across the U.S., analyzing how its locations align with state populations and exploring factors that influence store placements, like population density, urbanization, and regional economic activity.\n\n\nThis map displays the distribution of Chipotle stores across the United States.\n\n\n\n\n\n\n\n\n\n\n\n\nIn this section, we aim to visualize the proportion of Chipotle stores in each state relative to the total number of stores nationwide. To provide context, we first reference a population map to guide our analysis and ensure we don’t unintentionally recreate the population map again.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe initial plot shows a distribution of Chipotle stores that closely mirrors the population distribution across states, indicating a correlation between store counts and population sizes. To gain deeper insights, we adjust the analysis by calculating the number of Chipotle stores per million residents in each state. By visualizing this proportion, we account for population differences, allowing us to see which states have more stores per million residents."
-  },
-  {
-    "objectID": "projects/project-3-mapping-sabzara-tabitha/mapping.html#distribution-of-stores",
-    "href": "projects/project-3-mapping-sabzara-tabitha/mapping.html#distribution-of-stores",
-    "title": "Mapping Chipotlle Stores",
-    "section": "",
-    "text": "This map displays the distribution of Chipotle stores across the United States.\n\n\n\n\n\n\n\n\n\nIn this section, we aim to visualize the proportion of Chipotle stores in each state across the United States. To achieve this, we first create a population map to provide context and to ensure we don’t create the population map again.\n\n\n\n  |                                                                            \n  |                                                                      |   0%\n  |                                                                            \n  |                                                                      |   1%\n  |                                                                            \n  |=                                                                     |   1%\n  |                                                                            \n  |=                                                                     |   2%\n  |                                                                            \n  |==                                                                    |   3%\n  |                                                                            \n  |==                                                                    |   4%\n  |                                                                            \n  |===                                                                   |   4%\n  |                                                                            \n  |===                                                                   |   5%\n  |                                                                            \n  |====                                                                  |   5%\n  |                                                                            \n  |====                                                                  |   6%\n  |                                                                            \n  |=====                                                                 |   7%\n  |                                                                            \n  |=====                                                                 |   8%\n  |                                                                            \n  |======                                                                |   8%\n  |                                                                            \n  |======                                                                |   9%\n  |                                                                            \n  |=======                                                               |   9%\n  |                                                                            \n  |=======                                                               |  10%\n  |                                                                            \n  |========                                                              |  11%\n  |                                                                            \n  |========                                                              |  12%\n  |                                                                            \n  |=========                                                             |  13%\n  |                                                                            \n  |==========                                                            |  14%\n  |                                                                            \n  |==========                                                            |  15%\n  |                                                                            \n  |===========                                                           |  15%\n  |                                                                            \n  |============                                                          |  17%\n  |                                                                            \n  |=============                                                         |  19%\n  |                                                                            \n  |==============                                                        |  20%\n  |                                                                            \n  |===============                                                       |  22%\n  |                                                                            \n  |=================                                                     |  24%\n  |                                                                            \n  |==================                                                    |  26%\n  |                                                                            \n  |===================                                                   |  27%\n  |                                                                            \n  |====================                                                  |  29%\n  |                                                                            \n  |=====================                                                 |  31%\n  |                                                                            \n  |=======================                                               |  33%\n  |                                                                            \n  |========================                                              |  34%\n  |                                                                            \n  |=========================                                             |  35%\n  |                                                                            \n  |=========================                                             |  36%\n  |                                                                            \n  |==========================                                            |  37%\n  |                                                                            \n  |===========================                                           |  38%\n  |                                                                            \n  |===========================                                           |  39%\n  |                                                                            \n  |============================                                          |  40%\n  |                                                                            \n  |=============================                                         |  42%\n  |                                                                            \n  |==============================                                        |  43%\n  |                                                                            \n  |===============================                                       |  44%\n  |                                                                            \n  |================================                                      |  46%\n  |                                                                            \n  |==================================                                    |  48%\n  |                                                                            \n  |==================================                                    |  49%\n  |                                                                            \n  |====================================                                  |  52%\n  |                                                                            \n  |===========================================================           |  85%\n  |                                                                            \n  |======================================================================| 100%\n\n\n\n\n\n\n\n\n\nHere, we create a map displaying the proportion of Chipotle stores in each state relative to the total number of stores across the United States.\n\n\n\n\n\n\n\n\n\nFrom the plot created, it is evident that the map closely resembles a population map, as it shows a similar distribution pattern across the states\nTo create a map that accounts for population differences, we calculate the number of Chipotle stores per million residents in each state."
-  },
-  {
-    "objectID": "projects/project-3-mapping-sabzara-tabitha/mapping.html#distribution-of-stores.",
-    "href": "projects/project-3-mapping-sabzara-tabitha/mapping.html#distribution-of-stores.",
-    "title": "Mapping Chipotlle Stores",
-    "section": "",
-    "text": "This map displays the distribution of Chipotle stores across the United States.\n\n\n\n\n\n\n\n\n\nIn this section, we aim to visualize the proportion of Chipotle stores in each state across the United States. To achieve this, we first create a population map to provide context and to ensure we don’t create the population map again.\n\n\n\n\n\n\n\n\n\nHere, we create a map displaying the proportion of Chipotle stores in each state relative to the total number of stores across the United States.\n\n\n\n\n\n\n\n\n\nFrom the plot created, it is evident that the map closely resembles a population map, as it shows a similar distribution pattern across the states\nTo create a map that accounts for population differences, we calculate the number of Chipotle stores per million residents in each state."
-  },
-  {
-    "objectID": "projects/project-2-fec-sabzara-alex/fec-analysis.html#fec-analysis-a-look-at-campaign-contributions-and-election-outcomes",
-    "href": "projects/project-2-fec-sabzara-alex/fec-analysis.html#fec-analysis-a-look-at-campaign-contributions-and-election-outcomes",
-    "title": "FEC Analysis",
-    "section": "",
-    "text": "This project analyzes the relationship between campaign contributions and election results for the U.S. House of Representatives in New Jersey during the 2016 election cycle. Using data from the Federal Election Commission (FEC), we explore how contributions from various committees influenced the success of candidates, shedding light on the impact of financial support in determining election outcomes.\n\n\nThis plot visualizes the total contributions made to candidates grouped by the winning status (won or lost) and committee designation.\n\n\n\nTotal Contributions by Winning Status\n\n\nwon\ntotal_contribution_amt\n\n\n\n\nFALSE\n5406606\n\n\nTRUE\n11460967\n\n\n\nSource:  Federal Election Commission\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThis table displays candidates, whether they won or lost, the types of transactions associated with their campaigns, and the total transaction amounts.\n\n\n\nCandidate Contributions by Winning Status and Transaction Types\n\n\ncand_name\ntransaction_tp\nwon\ntotal\n\n\n\n\nCOLE, DAVID HAGERTY\n24K\nFALSE\n1000\n\n\nCOLEMAN, BONNIE WATSON\n24E\nTRUE\n20\n\n\nCOLEMAN, BONNIE WATSON\n24K\nTRUE\n523035\n\n\nFRELINGHUYSEN, RODNEY P.\n24E\nTRUE\n48\n\n\nFRELINGHUYSEN, RODNEY P.\n24K\nTRUE\n915210\n\n\nFRELINGHUYSEN, RODNEY P.\n24Z\nTRUE\n7889\n\n\nGARRETT, SCOTT REP.\n24A\nFALSE\n4276731\n\n\nGARRETT, SCOTT REP.\n24C\nFALSE\n93710\n\n\nGARRETT, SCOTT REP.\n24E\nFALSE\n335388\n\n\nGARRETT, SCOTT REP.\n24F\nFALSE\n2350\n\n\nGARRETT, SCOTT REP.\n24K\nFALSE\n668881\n\n\nGARRETT, SCOTT REP.\n24Z\nFALSE\n5247\n\n\nGOTTHEIMER, JOSH\n24A\nTRUE\n30000\n\n\nGOTTHEIMER, JOSH\n24C\nTRUE\n96200\n\n\nGOTTHEIMER, JOSH\n24E\nTRUE\n1930852\n\n\nGOTTHEIMER, JOSH\n24F\nTRUE\n55514\n\n\nGOTTHEIMER, JOSH\n24K\nTRUE\n646002\n\n\nGOTTHEIMER, JOSH\n24Z\nTRUE\n2351\n\n\nJACOB, PETER MR.\n24K\nFALSE\n6348\n\n\nLANCE, LEONARD\n24E\nTRUE\n13400\n\n\nLANCE, LEONARD\n24F\nTRUE\n2158\n\n\nLANCE, LEONARD\n24K\nTRUE\n671912\n\n\nLANCE, LEONARD\n24Z\nTRUE\n1100\n\n\nLAW, ALEXANDER\n24E\nFALSE\n9821\n\n\nLOBIONDO, FRANK A.\n24E\nTRUE\n18069\n\n\nLOBIONDO, FRANK A.\n24K\nTRUE\n1144426\n\n\nLOBIONDO, FRANK A.\n24Z\nTRUE\n1557\n\n\nMACARTHUR, THOMAS\n24E\nTRUE\n2445\n\n\nMACARTHUR, THOMAS\n24F\nTRUE\n2312\n\n\nMACARTHUR, THOMAS\n24K\nTRUE\n844833\n\n\nMACARTHUR, THOMAS\n24Z\nTRUE\n745\n\n\nNORCROSS, DONALD W\n24E\nTRUE\n216542\n\n\nNORCROSS, DONALD W\n24K\nTRUE\n857546\n\n\nNORCROSS, DONALD W\n24Z\nTRUE\n2513\n\n\nPALLONE, FRANK JR\n24E\nTRUE\n20\n\n\nPALLONE, FRANK JR\n24K\nTRUE\n1590863\n\n\nPALLONE, FRANK JR\n24Z\nTRUE\n1420\n\n\nPASCRELL, WILLIAM J. HON.\n24E\nTRUE\n10\n\n\nPASCRELL, WILLIAM J. HON.\n24K\nTRUE\n918850\n\n\nPATTERSON, ROBERT W.\n24K\nFALSE\n5000\n\n\nPAYNE, DONALD M., JR.\n24E\nTRUE\n20\n\n\nPAYNE, DONALD M., JR.\n24K\nTRUE\n345450\n\n\nSIRES, ALBIO\n24E\nTRUE\n10\n\n\nSIRES, ALBIO\n24K\nTRUE\n353850\n\n\nSMITH, CHRISTOPHER H\n24E\nTRUE\n9508\n\n\nSMITH, CHRISTOPHER H\n24K\nTRUE\n249287\n\n\nSMITH, CHRISTOPHER H\n24Z\nTRUE\n5000\n\n\nSONNEK-SCHMELZ, BRENT J\n24K\nFALSE\n2100\n\n\n\nSource:  Federal Election Commission\n\n\n\n\n\nNote: a Transaction types include various contributions made to or against candidates. Descriptions can be found on FEC: https://www.fec.gov/campaign-finance-data/transaction-type-code-descriptions/"
-  },
-  {
-    "objectID": "projects/project-2-fec-sabzara-alex/fec-analysis.html#fec-analysis-campaign-contributions-and-election-outcomes",
-    "href": "projects/project-2-fec-sabzara-alex/fec-analysis.html#fec-analysis-campaign-contributions-and-election-outcomes",
-    "title": "FEC Analysis",
-    "section": "",
-    "text": "This project analyzes the relationship between campaign contributions and election results for the U.S. House of Representatives in New Jersey during the 2016 election cycle. Using data from the Federal Election Commission (FEC), we explore how contributions from various committees influenced the success of candidates, shedding light on the impact of financial support in determining election outcomes.\n\n\nThis plot visualizes the total contributions made to candidates grouped by the winning status (won or lost) and committee designation.\n\n\n\nTotal Contributions by Winning Status\n\n\nwon\ntotal_contribution_amt\n\n\n\n\nFALSE\n5406606\n\n\nTRUE\n11460967\n\n\n\nSource:  Federal Election Commission\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThis table displays candidates, whether they won or lost, the types of transactions associated with their campaigns, and the total transaction amounts.\n\n\n\nCandidate Contributions by Winning Status and Transaction Types\n\n\ncand_name\ntransaction_tp\nwon\ntotal\n\n\n\n\nCOLE, DAVID HAGERTY\n24K\nFALSE\n1000\n\n\nCOLEMAN, BONNIE WATSON\n24E\nTRUE\n20\n\n\nCOLEMAN, BONNIE WATSON\n24K\nTRUE\n523035\n\n\nFRELINGHUYSEN, RODNEY P.\n24E\nTRUE\n48\n\n\nFRELINGHUYSEN, RODNEY P.\n24K\nTRUE\n915210\n\n\nFRELINGHUYSEN, RODNEY P.\n24Z\nTRUE\n7889\n\n\nGARRETT, SCOTT REP.\n24A\nFALSE\n4276731\n\n\nGARRETT, SCOTT REP.\n24C\nFALSE\n93710\n\n\nGARRETT, SCOTT REP.\n24E\nFALSE\n335388\n\n\nGARRETT, SCOTT REP.\n24F\nFALSE\n2350\n\n\nGARRETT, SCOTT REP.\n24K\nFALSE\n668881\n\n\nGARRETT, SCOTT REP.\n24Z\nFALSE\n5247\n\n\nGOTTHEIMER, JOSH\n24A\nTRUE\n30000\n\n\nGOTTHEIMER, JOSH\n24C\nTRUE\n96200\n\n\nGOTTHEIMER, JOSH\n24E\nTRUE\n1930852\n\n\nGOTTHEIMER, JOSH\n24F\nTRUE\n55514\n\n\nGOTTHEIMER, JOSH\n24K\nTRUE\n646002\n\n\nGOTTHEIMER, JOSH\n24Z\nTRUE\n2351\n\n\nJACOB, PETER MR.\n24K\nFALSE\n6348\n\n\nLANCE, LEONARD\n24E\nTRUE\n13400\n\n\nLANCE, LEONARD\n24F\nTRUE\n2158\n\n\nLANCE, LEONARD\n24K\nTRUE\n671912\n\n\nLANCE, LEONARD\n24Z\nTRUE\n1100\n\n\nLAW, ALEXANDER\n24E\nFALSE\n9821\n\n\nLOBIONDO, FRANK A.\n24E\nTRUE\n18069\n\n\nLOBIONDO, FRANK A.\n24K\nTRUE\n1144426\n\n\nLOBIONDO, FRANK A.\n24Z\nTRUE\n1557\n\n\nMACARTHUR, THOMAS\n24E\nTRUE\n2445\n\n\nMACARTHUR, THOMAS\n24F\nTRUE\n2312\n\n\nMACARTHUR, THOMAS\n24K\nTRUE\n844833\n\n\nMACARTHUR, THOMAS\n24Z\nTRUE\n745\n\n\nNORCROSS, DONALD W\n24E\nTRUE\n216542\n\n\nNORCROSS, DONALD W\n24K\nTRUE\n857546\n\n\nNORCROSS, DONALD W\n24Z\nTRUE\n2513\n\n\nPALLONE, FRANK JR\n24E\nTRUE\n20\n\n\nPALLONE, FRANK JR\n24K\nTRUE\n1590863\n\n\nPALLONE, FRANK JR\n24Z\nTRUE\n1420\n\n\nPASCRELL, WILLIAM J. HON.\n24E\nTRUE\n10\n\n\nPASCRELL, WILLIAM J. HON.\n24K\nTRUE\n918850\n\n\nPATTERSON, ROBERT W.\n24K\nFALSE\n5000\n\n\nPAYNE, DONALD M., JR.\n24E\nTRUE\n20\n\n\nPAYNE, DONALD M., JR.\n24K\nTRUE\n345450\n\n\nSIRES, ALBIO\n24E\nTRUE\n10\n\n\nSIRES, ALBIO\n24K\nTRUE\n353850\n\n\nSMITH, CHRISTOPHER H\n24E\nTRUE\n9508\n\n\nSMITH, CHRISTOPHER H\n24K\nTRUE\n249287\n\n\nSMITH, CHRISTOPHER H\n24Z\nTRUE\n5000\n\n\nSONNEK-SCHMELZ, BRENT J\n24K\nFALSE\n2100\n\n\n\nSource:  Federal Election Commission\n\n\n\n\n\nNote: a Transaction types include various contributions made to or against candidates. Descriptions can be found on FEC: https://www.fec.gov/campaign-finance-data/transaction-type-code-descriptions/"
-  },
-  {
-    "objectID": "projects/project-2-fec-sabzara-alex/fec-analysis.html#campaign-contributions-and-election-outcomes",
-    "href": "projects/project-2-fec-sabzara-alex/fec-analysis.html#campaign-contributions-and-election-outcomes",
-    "title": "FEC Analysis",
-    "section": "",
-    "text": "This project analyzes the relationship between campaign contributions and election results for the U.S. House of Representatives in New Jersey during the 2016 election cycle. Using data from the Federal Election Commission (FEC), we explore how contributions from various committees influenced the success of candidates, shedding light on the impact of financial support in determining election outcomes.\n\n\nThis plot visualizes the total contributions made to candidates grouped by the winning status (won or lost) and committee designation.\n\n\n\nTotal Contributions by Winning Status\n\n\nwon\ntotal_contribution_amt\n\n\n\n\nFALSE\n5406606\n\n\nTRUE\n11460967\n\n\n\nSource:  Federal Election Commission\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThis table displays candidates, whether they won or lost, the types of transactions associated with their campaigns, and the total transaction amounts.\n\n\n\nCandidate Contributions by Winning Status and Transaction Types\n\n\ncand_name\ntransaction_tp\nwon\ntotal\n\n\n\n\nCOLE, DAVID HAGERTY\n24K\nFALSE\n1000\n\n\nCOLEMAN, BONNIE WATSON\n24E\nTRUE\n20\n\n\nCOLEMAN, BONNIE WATSON\n24K\nTRUE\n523035\n\n\nFRELINGHUYSEN, RODNEY P.\n24E\nTRUE\n48\n\n\nFRELINGHUYSEN, RODNEY P.\n24K\nTRUE\n915210\n\n\nFRELINGHUYSEN, RODNEY P.\n24Z\nTRUE\n7889\n\n\nGARRETT, SCOTT REP.\n24A\nFALSE\n4276731\n\n\nGARRETT, SCOTT REP.\n24C\nFALSE\n93710\n\n\nGARRETT, SCOTT REP.\n24E\nFALSE\n335388\n\n\nGARRETT, SCOTT REP.\n24F\nFALSE\n2350\n\n\nGARRETT, SCOTT REP.\n24K\nFALSE\n668881\n\n\nGARRETT, SCOTT REP.\n24Z\nFALSE\n5247\n\n\nGOTTHEIMER, JOSH\n24A\nTRUE\n30000\n\n\nGOTTHEIMER, JOSH\n24C\nTRUE\n96200\n\n\nGOTTHEIMER, JOSH\n24E\nTRUE\n1930852\n\n\nGOTTHEIMER, JOSH\n24F\nTRUE\n55514\n\n\nGOTTHEIMER, JOSH\n24K\nTRUE\n646002\n\n\nGOTTHEIMER, JOSH\n24Z\nTRUE\n2351\n\n\nJACOB, PETER MR.\n24K\nFALSE\n6348\n\n\nLANCE, LEONARD\n24E\nTRUE\n13400\n\n\nLANCE, LEONARD\n24F\nTRUE\n2158\n\n\nLANCE, LEONARD\n24K\nTRUE\n671912\n\n\nLANCE, LEONARD\n24Z\nTRUE\n1100\n\n\nLAW, ALEXANDER\n24E\nFALSE\n9821\n\n\nLOBIONDO, FRANK A.\n24E\nTRUE\n18069\n\n\nLOBIONDO, FRANK A.\n24K\nTRUE\n1144426\n\n\nLOBIONDO, FRANK A.\n24Z\nTRUE\n1557\n\n\nMACARTHUR, THOMAS\n24E\nTRUE\n2445\n\n\nMACARTHUR, THOMAS\n24F\nTRUE\n2312\n\n\nMACARTHUR, THOMAS\n24K\nTRUE\n844833\n\n\nMACARTHUR, THOMAS\n24Z\nTRUE\n745\n\n\nNORCROSS, DONALD W\n24E\nTRUE\n216542\n\n\nNORCROSS, DONALD W\n24K\nTRUE\n857546\n\n\nNORCROSS, DONALD W\n24Z\nTRUE\n2513\n\n\nPALLONE, FRANK JR\n24E\nTRUE\n20\n\n\nPALLONE, FRANK JR\n24K\nTRUE\n1590863\n\n\nPALLONE, FRANK JR\n24Z\nTRUE\n1420\n\n\nPASCRELL, WILLIAM J. HON.\n24E\nTRUE\n10\n\n\nPASCRELL, WILLIAM J. HON.\n24K\nTRUE\n918850\n\n\nPATTERSON, ROBERT W.\n24K\nFALSE\n5000\n\n\nPAYNE, DONALD M., JR.\n24E\nTRUE\n20\n\n\nPAYNE, DONALD M., JR.\n24K\nTRUE\n345450\n\n\nSIRES, ALBIO\n24E\nTRUE\n10\n\n\nSIRES, ALBIO\n24K\nTRUE\n353850\n\n\nSMITH, CHRISTOPHER H\n24E\nTRUE\n9508\n\n\nSMITH, CHRISTOPHER H\n24K\nTRUE\n249287\n\n\nSMITH, CHRISTOPHER H\n24Z\nTRUE\n5000\n\n\nSONNEK-SCHMELZ, BRENT J\n24K\nFALSE\n2100\n\n\n\nSource:  Federal Election Commission\n\n\n\n\n\nNote: a Transaction types include various contributions made to or against candidates. Descriptions can be found on FEC: https://www.fec.gov/campaign-finance-data/transaction-type-code-descriptions/"
+    "text": "Sabzara is a sophomore at Smith College, majoring in Quantitative Economics and Mathematics. She is passionate about using data to create visualizations that help drive better decision-making."
   }
 ]

@@ -8,6 +8,7 @@ output:
 ![Sabzara Ali](my.figure.png)
 
 ## Projects
+
 Explore my data analysis and visualization projects from SDS192!
 
 ### Scorecard Analysis
@@ -18,8 +19,7 @@ Explore my data analysis and visualization projects from SDS192!
 
 ### FEC Analysis
 
--   This analysis dives into the relationship between campaign contributions and election outcomes in New Jersey's 2016 U.S. House race. While winning candidates received higher contributions, especially from lobbyist committees, the data shows that multiple factors—such as committee type and political environment—play crucial roles in determining electoral success.
-[View Project](projects/project-2-fec-sabzara-alex/fec-analysis.qmd)
+-   This analysis dives into the relationship between campaign contributions and election outcomes in New Jersey's 2016 U.S. House race. While winning candidates received higher contributions, especially from lobbyist committees, the data shows that multiple factors—such as committee type and political environment—play crucial roles in determining electoral success. [View Project](projects/project-2-fec-sabzara-alex/fec-analysis.qmd)
 
 ------------------------------------------------------------------------
 
